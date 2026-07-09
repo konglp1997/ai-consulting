@@ -62,13 +62,10 @@
 
   /** Inject AIHotNews logo + title at the top of detail pages */
   function injectDetailHeader() {
-    // Only on detail pages (URL contains /summary-)
     if (!location.pathname.match(/\/summary-/)) return;
     var main = document.querySelector('.main-content');
     if (!main || main.querySelector('.detail-hero')) return;
 
-    // Derive home URL from current path (strip date segments)
-    // e.g. /ai-consulting/2026/07/09/summary-zh.html -> /ai-consulting/
     var parts = location.pathname.split('/').filter(Boolean);
     var baseParts = [];
     for (var i = 0; i < parts.length; i++) {
@@ -94,21 +91,34 @@
     main.insertBefore(hero, main.firstChild);
   }
 
-  /** Wrap each news item (starting at `<a id="item-N">`) in a glass card */
+  /** Wrap each news item in a glass card.
+   *  Jekyll wraps <a id="item-N"></a> in a <p>, so we find the <p>
+   *  (main-content direct child) and wrap from there. */
   function wrapNewsItems() {
     var main = document.querySelector('.main-content');
     if (!main) return;
     var anchors = Array.from(main.querySelectorAll('a[id^="item-"]'));
     if (anchors.length === 0) return;
 
-    anchors.forEach(function (anchor, idx) {
-      var nextAnchor = anchors[idx + 1];
+    // Find the main-content direct-child block containing each anchor
+    var itemBlocks = anchors.map(function (anchor) {
+      var node = anchor;
+      while (node && node.parentNode !== main) {
+        node = node.parentNode;
+        if (!node) return null;
+      }
+      return node;
+    });
+
+    itemBlocks.forEach(function (block, idx) {
+      if (!block) return;
+      var nextBlock = itemBlocks[idx + 1] || null;
       var wrapper = document.createElement('div');
       wrapper.className = 'news-item-glass';
-      anchor.parentNode.insertBefore(wrapper, anchor);
-      wrapper.appendChild(anchor);
+      main.insertBefore(wrapper, block);
+      wrapper.appendChild(block);
       var node = wrapper.nextSibling;
-      while (node && node !== nextAnchor) {
+      while (node && node !== nextBlock) {
         var next = node.nextSibling;
         if (node.nodeType === 1 && node.tagName === 'HR') {
           node = next;
@@ -120,6 +130,13 @@
     });
   }
 
+  /** Open all <details> (参考链接) by default */
+  function openAllDetails() {
+    document.querySelectorAll('.main-content details').forEach(function (d) {
+      d.setAttribute('open', '');
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     processScoreBadges();
     markSemanticElements();
@@ -127,5 +144,6 @@
     setupScrollProgress();
     injectDetailHeader();
     wrapNewsItems();
+    openAllDetails();
   });
 })();
