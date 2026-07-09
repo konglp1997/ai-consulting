@@ -167,16 +167,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em !important;
 }
 
-/* === Header === */
+/* === Header — hide on home page (hero replaces it) === */
 .page-header {
-  background: var(--ahn-glass) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  border-bottom: 1px solid var(--ahn-glass-border) !important;
-  padding: 2.5rem 1rem !important;
-  position: relative !important;
-  overflow: hidden !important;
-  box-shadow: var(--ahn-shadow-sm);
+  display: none !important;
 }
 
 .page-header h1,
@@ -230,14 +223,14 @@ h1, h2, h3, h4, h5, h6 {
 /* === Hero === */
 .hero-section {
   text-align: center;
-  padding: 2rem 0 3rem;
+  padding: 3rem 0 3rem;
   margin-bottom: 2.5rem;
   animation: fade-up 0.8s var(--ahn-ease) both;
 }
 
 .hero-logo {
   display: inline-block;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   filter: drop-shadow(0 8px 24px rgba(99, 102, 241, 0.3));
   animation: logo-float 4s ease-in-out infinite;
 }
@@ -254,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-size: 3.2rem !important;
+  font-size: 4.5rem !important;
   font-weight: 700 !important;
   letter-spacing: -0.04em !important;
   margin: 0 0 0.5rem !important;
@@ -271,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-subtitle {
   color: var(--ahn-text-muted) !important;
-  font-size: 1.15rem !important;
+  font-size: 1.4rem !important;
   margin: 0 auto 1.5rem !important;
   max-width: 540px;
 }
@@ -604,15 +597,92 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 !important;
 }
 
-/* === TOC === */
+/* === News item glass card (wraps each news article in detail page) === */
+.news-item-glass {
+  background: var(--ahn-glass) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid var(--ahn-glass-border) !important;
+  border-radius: 20px !important;
+  padding: 2rem 2.2rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: var(--ahn-shadow-md) !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ahn-ease);
+  animation: fade-up 0.6s var(--ahn-ease) both;
+}
+
+.news-item-glass:nth-child(1) { animation-delay: 0.05s; }
+.news-item-glass:nth-child(2) { animation-delay: 0.1s; }
+.news-item-glass:nth-child(3) { animation-delay: 0.15s; }
+.news-item-glass:nth-child(4) { animation-delay: 0.2s; }
+.news-item-glass:nth-child(5) { animation-delay: 0.25s; }
+.news-item-glass:nth-child(6) { animation-delay: 0.3s; }
+.news-item-glass:nth-child(7) { animation-delay: 0.35s; }
+.news-item-glass:nth-child(8) { animation-delay: 0.4s; }
+.news-item-glass:nth-child(9) { animation-delay: 0.45s; }
+.news-item-glass:nth-child(10) { animation-delay: 0.5s; }
+
+/* Subtle top accent line on each news card */
+.news-item-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ahn-gradient-brand);
+  opacity: 0.7;
+}
+
+.news-item-glass:hover {
+  border-color: rgba(99, 102, 241, 0.25) !important;
+  box-shadow: var(--ahn-shadow-glow), var(--ahn-shadow-md) !important;
+  transform: translateY(-2px);
+}
+
+/* The hidden anchor inside news-item-glass */
+.news-item-glass > a[id^="item-"] {
+  display: block;
+  position: relative;
+  top: -1rem;
+  visibility: hidden;
+}
+
+/* h2 inside a news card — remove border, add spacing */
+.news-item-glass h2 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0.5rem;
+  font-size: 1.5rem !important;
+  scroll-margin-top: 1rem;
+}
+
+/* === TOC (排名列表) — enhanced glass === */
 .main-content > ol {
   border: 1px solid var(--ahn-glass-border) !important;
-  border-radius: 14px !important;
-  padding: 1.2rem 1.5rem 1.2rem 3rem !important;
+  border-radius: 20px !important;
+  padding: 1.5rem 1.8rem 1.5rem 3.2rem !important;
   background: var(--ahn-glass) !important;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   list-style: decimal;
-  box-shadow: var(--ahn-shadow-sm);
+  box-shadow: var(--ahn-shadow-md) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content > ol::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ahn-gradient-brand);
+  opacity: 0.7;
 }
 
 .main-content > ol > li {
@@ -627,17 +697,29 @@ h1, h2, h3, h4, h5, h6 {
 .main-content > ol > li a { color: var(--ahn-text) !important; }
 .main-content > ol > li a:hover { color: var(--ahn-indigo) !important; }
 
-/* === Summary blockquote === */
+/* === Summary blockquote ("筛选出 X 条重要资讯") — enhanced glass === */
 .main-content > blockquote:first-of-type {
-  border-left: 3px solid var(--ahn-indigo) !important;
+  border: 1px solid var(--ahn-glass-border) !important;
+  border-left: 4px solid var(--ahn-indigo) !important;
   background: var(--ahn-glass) !important;
-  backdrop-filter: blur(12px);
-  color: var(--ahn-text-muted) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  color: var(--ahn-text) !important;
   font-style: normal !important;
-  padding: 1em 1.4em !important;
-  border-radius: 0 12px 12px 0 !important;
-  margin: 1.5em 0 !important;
-  box-shadow: var(--ahn-shadow-sm);
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  padding: 1.2em 1.6em !important;
+  border-radius: 16px !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: var(--ahn-shadow-md) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content > blockquote:first-of-type::before {
+  content: "📊";
+  margin-right: 0.5em;
+  font-size: 1.2em;
 }
 
 /* === Article headings === */
@@ -675,8 +757,8 @@ footer {
 
 /* === Responsive === */
 @media (max-width: 600px) {
-  .page-header h1 { font-size: 2rem !important; }
-  .hero-title { font-size: 2.2rem !important; }
+  .hero-title { font-size: 2.8rem !important; }
+  .hero-subtitle { font-size: 1.1rem !important; }
   .hero-stats { gap: 1rem; }
   .hero-stat { padding: 0.8rem 1rem; }
   .hero-stat-value { font-size: 1.3rem; }
@@ -684,6 +766,7 @@ footer {
   .post-card { padding: 1rem !important; gap: 0.8rem !important; }
   .post-card-date { width: 48px; height: 48px; font-size: 0.85rem; }
   .post-card-title { font-size: 1rem !important; }
+  .news-item-glass { padding: 1.3rem 1.2rem !important; }
 }
 
 /* === Scrollbar === */
