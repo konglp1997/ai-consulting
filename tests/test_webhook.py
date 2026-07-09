@@ -832,7 +832,7 @@ class TestSendDailySummary:
         notifier = WebhookNotifier(config)
         summarizer = DailySummarizer()
         items = [_make_item()]
-        summary = "# Horizon Daily\nTest summary"
+        summary = "# AIHotNews Daily\nTest summary"
 
         with patch.object(notifier, "notify", new_callable=AsyncMock) as mock_notify:
             _run_async(

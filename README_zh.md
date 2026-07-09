@@ -1,20 +1,20 @@
 <div align="center">
 
-<h1>🌅 Horizon</h1>
+<h1>🔥 AIHotNews</h1>
 
-<p><strong>你只需享受新闻，剩下交给 Horizon。</strong></p>
+<p><strong>每日 AI 前沿资讯，尽在 AIHotNews</strong></p>
 
-<a href="https://trendshift.io/repositories/22864?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-22864" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/22864/daily" alt="Thysrael%2FHorizon | Trendshift" width="250" height="55"/></a>
-<a href="https://trendshift.io/repositories/22864?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-22864" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/22864/weekly?language=Python" alt="Thysrael%2FHorizon | Trendshift" width="250" height="55"/></a>
-<a href="https://hellogithub.com/repository/Thysrael/Horizon" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=7a4b606e28e4477998d35851cf4fdddf&claim_uid=rtjnLkYT7ziQJUG" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://trendshift.io/repositories/22864?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-22864" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/22864/daily" alt="konglp1997%2Fai-consulting | Trendshift" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/22864?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-22864" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/22864/weekly?language=Python" alt="konglp1997%2Fai-consulting | Trendshift" width="250" height="55"/></a>
+<a href="https://hellogithub.com/repository/konglp1997/ai-consulting" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=7a4b606e28e4477998d35851cf4fdddf&claim_uid=rtjnLkYT7ziQJUG" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 <br>
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 [![Tool uv](https://img.shields.io/badge/Tool-uv-4B275F?style=for-the-badge&logo=uv&logoColor=white)](https://github.com/astral-sh/uv)
-[![Website](https://img.shields.io/badge/Website-Horizon-263238?style=for-the-badge&logo=homepage&logoColor=white)](https://www.horizon1123.top/)
-[![Daily](https://img.shields.io/github/actions/workflow/status/Thysrael/Horizon/deploy-docs.yml?branch=main&label=Daily&style=for-the-badge&logo=date-fns&logoColor=white)](https://thysrael.github.io/Horizon/)
-[![Commit](https://img.shields.io/github/commit-activity/m/Thysrael/Horizon?label=Commit&style=for-the-badge&logo=github&logoColor=white)](https://github.com/Thysrael/Horizon/commits/main)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Thysrael/Horizon/pulls)
+[![Website](https://img.shields.io/badge/Website-AIHotNews-263238?style=for-the-badge&logo=homepage&logoColor=white)](https://konglp1997.github.io/ai-consulting/)
+[![Daily](https://img.shields.io/github/actions/workflow/status/konglp1997/ai-consulting/deploy-docs.yml?branch=main&label=Daily&style=for-the-badge&logo=date-fns&logoColor=white)](https://konglp1997.github.io/ai-consulting/)
+[![Commit](https://img.shields.io/github/commit-activity/m/konglp1997/ai-consulting?label=Commit&style=for-the-badge&logo=github&logoColor=white)](https://github.com/konglp1997/ai-consulting/commits/main)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/konglp1997/ai-consulting/pulls)
 ![Sources Welcome](https://img.shields.io/badge/sources-welcome-f97316?style=for-the-badge&logo=rss&logoColor=white)
 
 ![Claude](https://img.shields.io/badge/Claude-f0daba?style=flat-square&logo=anthropic&logoColor=black)
@@ -28,7 +28,7 @@
 
 📡 构建你专属的 AI 新闻雷达，生成中英双语日报。 | Your own AI-powered news radar.
 
-[📖 在线演示](https://thysrael.github.io/Horizon/) · [📋 配置指南](https://thysrael.github.io/Horizon/configuration) · [English](README.md) · [日本語](README_ja.md)
+[📖 在线演示](https://konglp1997.github.io/ai-consulting/) · [📋 配置指南](https://konglp1997.github.io/ai-consulting/configuration) · [English](README.md) · [日本語](README_ja.md)
 
 </div>
 
@@ -68,11 +68,11 @@
 </table>
 </details>
 
-## 为什么需要 Horizon？
+## 为什么需要 AIHotNews？
 
-好新闻分散在各处，坏信息却源源不断。Horizon 为你先完成第一轮筛选：从 Hacker News、Reddit、Telegram、RSS、Twitter/X、GitHub 和 OpenBB 抓取内容，合并重复新闻，用 AI 打分过滤，并为重要内容补充背景解释和社区讨论。
+好新闻分散在各处，坏信息却源源不断。AIHotNews 为你先完成第一轮筛选：从 Hacker News、Reddit、Telegram、RSS、Twitter/X、GitHub 和 OpenBB 抓取内容，合并重复新闻，用 AI 打分过滤，并为重要内容补充背景解释和社区讨论。
 
-但 Horizon 不只是又一个摘要工具。AI 很擅长降低噪声，但新闻仍然需要人的品味：你信任哪些信息源，哪些评论改变了你对事件的理解，哪些小众来源值得被更多人看见。Horizon 通过可定制的信息源、筛选标准、模型、语言、分发方式、评论摘要和社区信息源官网，把这层“人味”保留下来。
+但 AIHotNews 不只是又一个摘要工具。AI 很擅长降低噪声，但新闻仍然需要人的品味：你信任哪些信息源，哪些评论改变了你对事件的理解，哪些小众来源值得被更多人看见。AIHotNews 通过可定制的信息源、筛选标准、模型、语言、分发方式、评论摘要和社区信息源官网，把这层“人味”保留下来。
 
 ## 功能特性
 
@@ -171,11 +171,11 @@ flowchart LR
 
 ## 赞助
 
-Horizon 是一个业余时间维护的开源项目。如果你愿意支持这个项目，或希望出现在这里，欢迎[创建一个 Issue](https://github.com/Thysrael/Horizon/issues/new) 或[发邮件](mailto:thysrael@163.com)联系我。
+AIHotNews 是一个业余时间维护的开源项目。如果你愿意支持这个项目，或希望出现在这里，欢迎[创建一个 Issue](https://github.com/konglp1997/ai-consulting/issues/new) 或[发邮件](mailto:konglp1997@163.com)联系我。
 
 | 支持方 | 说明 |
 |--------|------|
-| [<img src="docs/assets/compshare-logo.png" alt="Compshare / 优云智算" width="220" />](https://www.compshare.cn/?ytag=GPU_YY_git_Horizon) | 优云智算目前正在支持 Horizon。优云智算是 UCloud 旗下 AI 云平台，主打包月、按次的高性价比国模 Agent Plan 套餐，低至 49 元/月起，同时提供官转稳定海外模型。支持接入 Claude Code、Codex 及 API 调用，支持企业高并发、7*24 技术支持和自助开票。<br><br>通过其[链接](https://www.compshare.cn/?ytag=GPU_YY_git_Horizon)注册，可获得 5 元平台体验金。 |
+| [<img src="docs/assets/compshare-logo.png" alt="Compshare / 优云智算" width="220" />](https://www.compshare.cn/?ytag=GPU_YY_git_Horizon) | 优云智算目前正在支持 AIHotNews。优云智算是 UCloud 旗下 AI 云平台，主打包月、按次的高性价比国模 Agent Plan 套餐，低至 49 元/月起，同时提供官转稳定海外模型。支持接入 Claude Code、Codex 及 API 调用，支持企业高并发、7*24 技术支持和自助开票。<br><br>通过其[链接](https://www.compshare.cn/?ytag=GPU_YY_git_Horizon)注册，可获得 5 元平台体验金。 |
 
 ## 快速开始
 
@@ -184,8 +184,8 @@ Horizon 是一个业余时间维护的开源项目。如果你愿意支持这个
 #### 方式 A：本地安装
 
 ```bash
-git clone https://github.com/Thysrael/Horizon.git
-cd horizon
+git clone https://github.com/konglp1997/ai-consulting.git
+cd ai-consulting
 
 # 使用 uv 安装（推荐）
 uv sync
@@ -214,8 +214,8 @@ uv pip install --only-binary=:all: openbb openbb-benzinga
 #### 方式 B：Docker
 
 ```bash
-git clone https://github.com/Thysrael/Horizon.git
-cd horizon
+git clone https://github.com/konglp1997/ai-consulting.git
+cd ai-consulting
 
 # 配置环境
 cp .env.example .env
@@ -237,7 +237,7 @@ docker compose run --rm horizon --hours 48
 uv run horizon-wizard
 ```
 
-向导会询问你的兴趣（如"LLM 推理"、"嵌入式"、"web 安全"），自动推荐并生成 `data/config.json`，还可选让 AI 补充推荐小众源。若你想分享信息源，请前往 [horizon1123.top](https://horizon1123.top/)。
+向导会询问你的兴趣（如"LLM 推理"、"嵌入式"、"web 安全"），自动推荐并生成 `data/config.json`，还可选让 AI 补充推荐小众源。若你想分享信息源，请前往 [konglp1997.github.io/ai-consulting](https://konglp1997.github.io/ai-consulting/)。
 
 **方式 B：手动配置**
 
@@ -319,7 +319,7 @@ docker compose run --rm horizon --hours 48   # 抓取最近 48 小时的内容
 
 ### 4. 自动化（可选）
 
-Horizon 非常适合作为 **GitHub Actions** 定时任务运行。查看 [`.github/workflows/daily-summary.yml`](.github/workflows/daily-summary.yml) 获取现成的工作流配置，可自动生成日报并部署到 GitHub Pages。
+AIHotNews 非常适合作为 **GitHub Actions** 定时任务运行。查看 [`.github/workflows/daily-summary.yml`](.github/workflows/daily-summary.yml) 获取现成的工作流配置，可自动生成日报并部署到 GitHub Pages。
 
 ## 支持的信息源
 
@@ -335,7 +335,7 @@ Horizon 非常适合作为 **GitHub Actions** 定时任务运行。查看 [`.git
 
 ## 日报可以去哪里
 
-Horizon 支持通过多种方式发布和分发生成的日报：
+AIHotNews 支持通过多种方式发布和分发生成的日报：
 
 | 方式 | 作用 |
 |------|------|
@@ -351,13 +351,13 @@ Horizon 支持通过多种方式发布和分发生成的日报：
 | 文档 | 内容 |
 |------|------|
 | [配置指南](docs/configuration.md) | AI 模型、信息源、过滤、邮件、Webhook、GitHub Pages 和 MCP 配置 |
-| [评分机制](docs/scoring.md) | Horizon 如何评估和排序新闻 |
+| [评分机制](docs/scoring.md) | AIHotNews 如何评估和排序新闻 |
 | [抓取器](docs/scrapers.md) | 信息源抓取器说明和扩展细节 |
 | [MCP 工具](src/mcp/README.md) | MCP 客户端可调用的工具说明 |
 
 ## 项目状态
 
-Horizon 已经支持完整的日报流程：多源抓取、AI 打分、去重、背景补充、评论摘要、双语生成、GitHub Pages 发布、邮件分发、Webhook 推送、Docker 部署、MCP 集成和配置向导。
+AIHotNews 已经支持完整的日报流程：多源抓取、AI 打分、去重、背景补充、评论摘要、双语生成、GitHub Pages 发布、邮件分发、Webhook 推送、Docker 部署、MCP 集成和配置向导。
 
 计划中的改进：
 
@@ -372,7 +372,7 @@ Horizon 已经支持完整的日报流程：多源抓取、AI 打分、去重、
 
 ### 分享信息源
 
-想把有价值的信息源分享给 Horizon 社区？请直接前往 **[horizon1123.top](https://horizon1123.top)** 提交。
+想把有价值的信息源分享给 AIHotNews 社区？请直接前往 **[konglp1997.github.io/ai-consulting](https://konglp1997.github.io/ai-consulting)** 提交。
 
 欢迎提交：你所在领域里优质的小众 RSS 发现、活跃 subreddit 的趋势、值得关注的 GitHub 动态，或 Telegram 频道精选内容。
 

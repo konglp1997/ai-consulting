@@ -348,7 +348,7 @@ class WebhookNotifier:
         if lang == "zh":
             if item_count == 0:
                 return (
-                    f"# Horizon 每日速递 - {date}\n\n"
+                    f"# AIHotNews 每日速递 - {date}\n\n"
                     f"> 已分析 {all_items_count} 条内容，暂无达到重要性阈值的资讯。"
                 )
             return (
@@ -359,12 +359,12 @@ class WebhookNotifier:
 
         if item_count == 0:
             return (
-                f"# Horizon Daily - {date}\n\n"
+                f"# AIHotNews Daily - {date}\n\n"
                 f"> Analyzed {all_items_count} items, but none met the importance threshold."
             )
 
         return (
-            f"# Horizon Daily - {date}\n\n"
+            f"# AIHotNews Daily - {date}\n\n"
             f"> Selected {item_count} important items from {all_items_count} fetched items.\n\n"
             "Expand the panels below to read the full briefing inside Feishu/Lark."
         )
@@ -415,9 +415,9 @@ class WebhookNotifier:
                     "title": {
                         "tag": "plain_text",
                         "content": (
-                            f"Horizon {date} 折叠日报"
+                            f"AIHotNews {date} 折叠日报"
                             if lang == "zh"
-                            else f"Horizon {date} Collapsible Daily"
+                            else f"AIHotNews {date} Collapsible Daily"
                         ),
                     },
                     "template": "blue",
@@ -498,9 +498,9 @@ class WebhookNotifier:
             overview_message = {
                 **base_vars,
                 "message_title": (
-                    f"Horizon {date} 总览"
+                    f"AIHotNews {date} 总览"
                     if lang == "zh"
-                    else f"Horizon {date} Overview"
+                    else f"AIHotNews {date} Overview"
                 ),
                 "message_kind": "overview",
                 "summary": overview,
@@ -536,7 +536,7 @@ class WebhookNotifier:
             {
                 **base_vars,
                 "message_title": (
-                    f"Horizon {date} 日报" if lang == "zh" else f"Horizon {date} Daily"
+                    f"AIHotNews {date} 日报" if lang == "zh" else f"AIHotNews {date} Daily"
                 ),
                 "message_kind": "summary",
                 "summary": summary,
@@ -770,7 +770,7 @@ class WebhookNotifier:
                 "all_items": 0,
                 "result": "failed",
                 "timestamp": str(int(datetime.now(timezone.utc).timestamp())),
-                "message_title": "Horizon generation failed",
+                "message_title": "AIHotNews generation failed",
                 "message_kind": "failure",
                 "summary": f"generation failed: {error_message}",
             }

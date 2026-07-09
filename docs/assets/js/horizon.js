@@ -137,6 +137,21 @@
     });
   }
 
+  /** Wrap the bottom blockquote (筛选出 X 条) + ol (排名列表) in one glass container */
+  function wrapSummarySection() {
+    var main = document.querySelector('.main-content');
+    if (!main) return;
+    var bq = main.querySelector('blockquote');
+    var ol = main.querySelector('ol');
+    if (!bq || !ol) return;
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'summary-glass-wrap';
+    main.insertBefore(wrapper, bq);
+    wrapper.appendChild(bq);
+    wrapper.appendChild(ol);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     processScoreBadges();
     markSemanticElements();
@@ -145,5 +160,6 @@
     injectDetailHeader();
     wrapNewsItems();
     openAllDetails();
+    wrapSummarySection();
   });
 })();

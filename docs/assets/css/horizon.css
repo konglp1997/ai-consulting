@@ -734,21 +734,23 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.65em;
 }
 
-/* === TOC (排名列表) — enhanced glass === */
-.main-content > ol {
-  border: 1px solid var(--ahn-glass-border) !important;
-  border-radius: 20px !important;
-  padding: 1.5rem 1.8rem 1.5rem 3.2rem !important;
-  background: var(--ahn-glass) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  list-style: decimal;
-  box-shadow: var(--ahn-shadow-md) !important;
+/* === Summary glass wrap (blockquote + ol in one glass container) === */
+.summary-glass-wrap {
   position: relative;
+  margin: 2rem 0 !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
   overflow: hidden;
+  animation: fade-up 0.6s var(--ahn-ease) both;
 }
 
-.main-content > ol::before {
+/* Top gradient accent line */
+.summary-glass-wrap::before {
   content: "";
   position: absolute;
   top: 0;
@@ -756,45 +758,58 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   height: 3px;
   background: var(--ahn-gradient-brand);
-  opacity: 0.7;
+  opacity: 0.8;
+  z-index: 1;
 }
 
-.main-content > ol > li {
+/* Inner blockquote (筛选出 X 条) — header inside the glass container */
+.summary-glass-wrap > blockquote {
+  border: none !important;
+  border-bottom: 1px solid var(--ahn-glass-border) !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: var(--ahn-text) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  padding: 1.4em 1.8em !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: relative;
+}
+
+.summary-glass-wrap > blockquote::before {
+  content: "📊";
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+
+/* Inner ol (排名列表) — list inside the glass container */
+.summary-glass-wrap > ol {
+  border: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 1.2em 1.8em 1.4em 3.2rem !important;
+  margin: 0 !important;
+  list-style: decimal;
+}
+
+.summary-glass-wrap > ol > li {
   padding: 0.6em 0 !important;
   border-bottom: 1px solid var(--ahn-glass-border);
   transition: padding-left 0.2s var(--ahn-ease);
   color: var(--ahn-text) !important;
 }
 
-.main-content > ol > li:last-child { border-bottom: none; }
-.main-content > ol > li:hover { padding-left: 0.4em; }
-.main-content > ol > li a { color: var(--ahn-text) !important; }
-.main-content > ol > li a:hover { color: var(--ahn-indigo) !important; }
-
-/* === Summary blockquote ("筛选出 X 条重要资讯") — enhanced glass === */
-.main-content > blockquote:first-of-type {
-  border: 1px solid var(--ahn-glass-border) !important;
-  border-left: 4px solid var(--ahn-indigo) !important;
-  background: var(--ahn-glass) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  color: var(--ahn-text) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 1.1rem !important;
-  padding: 1.2em 1.6em !important;
-  border-radius: 16px !important;
-  margin: 1.5rem 0 !important;
-  box-shadow: var(--ahn-shadow-md) !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.main-content > blockquote:first-of-type::before {
-  content: "📊";
-  margin-right: 0.5em;
-  font-size: 1.2em;
-}
+.summary-glass-wrap > ol > li:last-child { border-bottom: none; }
+.summary-glass-wrap > ol > li:hover { padding-left: 0.4em; }
+.summary-glass-wrap > ol > li a { color: var(--ahn-text) !important; }
+.summary-glass-wrap > ol > li a:hover { color: var(--ahn-indigo) !important; }
 
 /* === Article headings === */
 .main-content h1 {

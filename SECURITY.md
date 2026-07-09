@@ -2,9 +2,9 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in Horizon, please do **not** open a public issue.
+If you discover a security vulnerability in AIHotNews, please do **not** open a public issue.
 Instead, please report it privately by email:
-**thysrael@gmail.com**
+**konglp1997@163.com**
 
 Please include:
 - A clear description of the issue
@@ -22,7 +22,7 @@ I will try to:
 
 ## Supported Versions
 
-Security updates are provided for the latest maintained version of Horizon.
+Security updates are provided for the latest maintained version of AIHotNews.
 
 ## Disclosure Policy
 
