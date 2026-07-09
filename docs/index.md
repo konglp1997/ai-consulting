@@ -48,7 +48,7 @@ title: Home
   {% for post in zh_posts limit:20 %}
     <li>
       <a href="{{ post.url | relative_url }}">
-        <span>{{ post.date | date: "%Y-%m-%d" }} · 每日简报</span>
+        <span class="post-title">{{ post.date | date: "%Y-%m-%d" }} · 每日简报</span>
         <span class="post-arrow">→</span>
       </a>
     </li>
@@ -56,37 +56,6 @@ title: Home
     <li><em>暂无内容</em></li>
   {% endfor %}
 </ul>
-
-<div class="section-header">
-  <span class="section-icon">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-  </span>
-  <h2>文档</h2>
-</div>
-
-<div class="feature-grid">
-  <a class="feature-card" href="configuration">
-    <div class="feature-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-    </div>
-    <h3>配置指南</h3>
-    <p>AI 提供商、信息源、过滤规则与环境变量</p>
-  </a>
-  <a class="feature-card" href="scrapers">
-    <div class="feature-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </div>
-    <h3>信息源采集</h3>
-    <p>GitHub、Hacker News、RSS、Reddit 采集</p>
-  </a>
-  <a class="feature-card" href="scoring">
-    <div class="feature-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-    </div>
-    <h3>评分系统</h3>
-    <p>AI 内容分析与 0-10 评分体系</p>
-  </a>
-</div>
 
 </div>
 
@@ -104,7 +73,7 @@ title: Home
   {% for post in en_posts limit:20 %}
     <li>
       <a href="{{ post.url | relative_url }}">
-        <span>{{ post.date | date: "%Y-%m-%d" }} · Daily Brief</span>
+        <span class="post-title">{{ post.date | date: "%Y-%m-%d" }} · Daily Brief</span>
         <span class="post-arrow">→</span>
       </a>
     </li>
@@ -112,36 +81,5 @@ title: Home
     <li><em>No posts yet</em></li>
   {% endfor %}
 </ul>
-
-<div class="section-header">
-  <span class="section-icon">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-  </span>
-  <h2>Documentation</h2>
-</div>
-
-<div class="feature-grid">
-  <a class="feature-card" href="configuration">
-    <div class="feature-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-    </div>
-    <h3>Configuration</h3>
-    <p>AI providers, sources, filters, env vars</p>
-  </a>
-  <a class="feature-card" href="scrapers">
-    <div class="feature-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </div>
-    <h3>Source Scrapers</h3>
-    <p>GitHub, HN, RSS, Reddit collection</p>
-  </a>
-  <a class="feature-card" href="scoring">
-    <div class="feature-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-    </div>
-    <h3>Scoring System</h3>
-    <p>AI analysis & 0-10 scoring scale</p>
-  </a>
-</div>
 
 </div>

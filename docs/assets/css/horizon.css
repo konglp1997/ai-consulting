@@ -30,10 +30,10 @@
   --ahn-gradient-header: linear-gradient(135deg, #0a0e1a 0%, #121829 50%, #1a1040 100%);
   --ahn-gradient-glow: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.15), transparent 60%);
 
-  /* Typography */
-  --ahn-font-display: "Space Grotesk", "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --ahn-font-body: "Noto Sans SC", "PingFang SC", "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
-  --ahn-font-mono: "JetBrains Mono", "SF Mono", Monaco, Consolas, monospace;
+  /* Typography — system fonts only, no web fonts for fast load */
+  --ahn-font-display: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --ahn-font-body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --ahn-font-mono: "SF Mono", Monaco, Menlo, Consolas, monospace;
 
   /* Shadows */
   --ahn-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -59,6 +59,16 @@
     --ahn-text-dim: #7a8499;
     --ahn-gradient-header: linear-gradient(135deg, #ffffff 0%, #f4f7fc 100%);
     --ahn-gradient-glow: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.08), transparent 60%);
+  }
+  /* Light mode: post list uses dark text instead of white */
+  .post-list li a,
+  .post-list li .post-title,
+  .post-list li .post-arrow {
+    color: #0f1729 !important;
+  }
+  .post-list li:hover .post-title,
+  .post-list li:hover .post-arrow {
+    color: #0066cc !important;
   }
 }
 
@@ -368,28 +378,33 @@ h3 { font-size: 1.3em !important; }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  color: var(--ahn-text) !important;
-  font-weight: 500;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: none !important;
 }
 
 .post-list li a:hover {
   color: var(--ahn-cyan) !important;
-  text-shadow: none;
+  text-shadow: none !important;
 }
 
-.post-list li .post-date {
-  font-family: var(--ahn-font-mono);
-  font-size: 0.85rem;
-  color: var(--ahn-text-dim);
+.post-list li .post-title {
+  color: #ffffff !important;
+  font-size: 1rem;
+}
+
+.post-list li:hover .post-title {
+  color: var(--ahn-cyan) !important;
 }
 
 .post-list li .post-arrow {
-  color: var(--ahn-text-dim);
+  color: #ffffff !important;
+  font-weight: 700;
   transition: transform 0.2s var(--ahn-ease), color 0.2s var(--ahn-ease);
 }
 
 .post-list li:hover .post-arrow {
-  color: var(--ahn-cyan);
+  color: var(--ahn-cyan) !important;
   transform: translateX(4px);
 }
 
@@ -404,56 +419,6 @@ h3 { font-size: 1.3em !important; }
 .post-list li:nth-child(8) { animation-delay: 0.4s; }
 .post-list li:nth-child(9) { animation-delay: 0.45s; }
 .post-list li:nth-child(10) { animation-delay: 0.5s; }
-
-/* === Feature cards (documentation) === */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
-}
-
-.feature-card {
-  background: var(--ahn-surface);
-  border: 1px solid var(--ahn-border);
-  border-radius: 10px;
-  padding: 1.3rem 1.4rem;
-  transition: all 0.25s var(--ahn-ease);
-  text-decoration: none !important;
-  display: block;
-  animation: fade-up 0.6s var(--ahn-ease) both;
-}
-
-.feature-card:hover {
-  border-color: var(--ahn-cyan);
-  background: var(--ahn-surface-2);
-  transform: translateY(-3px);
-  box-shadow: var(--ahn-shadow-md);
-  text-shadow: none !important;
-}
-
-.feature-card .feature-icon {
-  display: inline-flex;
-  width: 36px;
-  height: 36px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background: var(--ahn-gradient-brand);
-  margin-bottom: 0.8rem;
-}
-
-.feature-card h3 {
-  margin: 0 0 0.4rem !important;
-  font-size: 1.05rem !important;
-  color: var(--ahn-text) !important;
-}
-
-.feature-card p {
-  margin: 0 !important;
-  color: var(--ahn-text-muted) !important;
-  font-size: 0.9rem;
-}
 
 /* === Score Badge === */
 .score-badge {
@@ -704,7 +669,6 @@ h3 { font-size: 1.3em !important; }
   .hero-stats { gap: 1.5rem; }
   .hero-stat-value { font-size: 1.4rem; }
   .main-content { padding: 1.5rem 1rem !important; }
-  .feature-grid { grid-template-columns: 1fr; }
 }
 
 /* === Scrollbar === */
