@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  /** Replace ⭐️ N/10 with a colored badge in h2, h3, and li elements */
+  /** Replace ⭐️ N/10 with a colored badge */
   function processScoreBadges() {
     var scoreRe = /⭐️\s*(\d+(?:\.\d+)?)\/10/;
     var targets = document.querySelectorAll('.main-content h2, .main-content h3, .main-content li');
@@ -21,7 +21,7 @@
     });
   }
 
-  /** Add semantic classes to tag lines and source lines */
+  /** Add semantic classes to tag/source lines */
   function markSemanticElements() {
     var paragraphs = document.querySelectorAll('.main-content p');
     paragraphs.forEach(function (p) {
@@ -47,11 +47,11 @@
     }
   }
 
-  /** Add scroll-progress bar at top of page */
+  /** Add scroll-progress bar */
   function setupScrollProgress() {
     var bar = document.createElement('div');
     bar.id = 'scroll-progress';
-    bar.style.cssText = 'position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#00e5ff,#a855f7,#ff2e63);z-index:9999;transition:width 0.1s;';
+    bar.style.cssText = 'position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#06b6d4,#8b5cf6,#ef4444);z-index:9999;transition:width 0.1s;';
     document.body.appendChild(bar);
     window.addEventListener('scroll', function () {
       var h = document.documentElement;
@@ -60,10 +60,37 @@
     });
   }
 
+  /** Wrap each news item (starting at `<a id="item-N">`) in a glass card */
+  function wrapNewsItems() {
+    var main = document.querySelector('.main-content');
+    if (!main) return;
+    var anchors = Array.from(main.querySelectorAll('a[id^="item-"]'));
+    if (anchors.length === 0) return;
+
+    anchors.forEach(function (anchor, idx) {
+      var nextAnchor = anchors[idx + 1];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'news-item-glass';
+      anchor.parentNode.insertBefore(wrapper, anchor);
+      wrapper.appendChild(anchor);
+      var node = wrapper.nextSibling;
+      while (node && node !== nextAnchor) {
+        var next = node.nextSibling;
+        if (node.nodeType === 1 && node.tagName === 'HR') {
+          node = next;
+          continue;
+        }
+        wrapper.appendChild(node);
+        node = next;
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     processScoreBadges();
     markSemanticElements();
     brandifyHeader();
     setupScrollProgress();
+    wrapNewsItems();
   });
 })();
