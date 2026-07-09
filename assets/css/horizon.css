@@ -247,10 +247,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-size: 4.5rem !important;
+  font-size: 6rem !important;
   font-weight: 700 !important;
   letter-spacing: -0.04em !important;
   margin: 0 0 0.5rem !important;
+  line-height: 1.1 !important;
 }
 
 .hero-title .brand-gradient {
@@ -597,18 +598,53 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 !important;
 }
 
-/* === News item glass card (wraps each news article in detail page) === */
+/* === Detail page hero (logo + AIHotNews + back link) === */
+.detail-hero {
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ahn-glass-border);
+  animation: fade-up 0.6s var(--ahn-ease) both;
+}
+
+.detail-hero-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none !important;
+}
+
+.detail-hero-link svg {
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.3));
+  animation: logo-float 4s ease-in-out infinite;
+}
+
+.detail-hero-title {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em;
+  background: var(--ahn-gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-flow 6s ease infinite;
+  text-shadow: none !important;
+}
+
+/* === News item glass card (wraps each news article) === */
 .news-item-glass {
-  background: var(--ahn-glass) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border: 1px solid var(--ahn-glass-border) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
   border-radius: 20px !important;
   padding: 2rem 2.2rem !important;
   margin: 1.5rem 0 !important;
-  box-shadow: var(--ahn-shadow-md) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
   position: relative;
-  overflow: hidden;
   transition: all 0.3s var(--ahn-ease);
   animation: fade-up 0.6s var(--ahn-ease) both;
 }
@@ -621,10 +657,8 @@ h1, h2, h3, h4, h5, h6 {
 .news-item-glass:nth-child(6) { animation-delay: 0.3s; }
 .news-item-glass:nth-child(7) { animation-delay: 0.35s; }
 .news-item-glass:nth-child(8) { animation-delay: 0.4s; }
-.news-item-glass:nth-child(9) { animation-delay: 0.45s; }
-.news-item-glass:nth-child(10) { animation-delay: 0.5s; }
 
-/* Subtle top accent line on each news card */
+/* Top accent line */
 .news-item-glass::before {
   content: "";
   position: absolute;
@@ -633,31 +667,71 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   height: 3px;
   background: var(--ahn-gradient-brand);
-  opacity: 0.7;
+  opacity: 0.8;
+  border-radius: 20px 20px 0 0;
 }
 
 .news-item-glass:hover {
-  border-color: rgba(99, 102, 241, 0.25) !important;
-  box-shadow: var(--ahn-shadow-glow), var(--ahn-shadow-md) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15) !important;
   transform: translateY(-2px);
 }
 
-/* The hidden anchor inside news-item-glass */
+/* Hidden anchor — keep for hash links but invisible */
 .news-item-glass > a[id^="item-"] {
   display: block;
   position: relative;
-  top: -1rem;
+  top: -2rem;
   visibility: hidden;
+  height: 0;
 }
 
-/* h2 inside a news card — remove border, add spacing */
+/* === Reset internal element spacing inside news cards === */
+.news-item-glass > * { margin-top: 0; }
+
 .news-item-glass h2 {
   border-bottom: none !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  padding-top: 0.5rem;
-  font-size: 1.5rem !important;
-  scroll-margin-top: 1rem;
+  padding: 0 !important;
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.4rem !important;
+  line-height: 1.4 !important;
+  scroll-margin-top: 2rem;
+}
+
+.news-item-glass h2 a {
+  color: var(--ahn-text) !important;
+}
+.news-item-glass h2 a:hover {
+  color: var(--ahn-indigo) !important;
+}
+
+.news-item-glass p {
+  margin: 0.8rem 0 !important;
+  line-height: 1.8 !important;
+}
+
+/* Source line inside news card */
+.news-item-glass .source-line {
+  margin: 1rem 0 !important;
+}
+
+/* details inside news card */
+.news-item-glass details {
+  margin: 1rem 0 !important;
+}
+
+.news-item-glass details > ul {
+  padding: 0.5em 1.2em 1em 2em !important;
+}
+
+/* tag-line inside news card */
+.news-item-glass .tag-line {
+  margin: 1rem 0 0.5rem !important;
+}
+
+/* score-badge inside news card h2 */
+.news-item-glass h2 .score-badge {
+  font-size: 0.65em;
 }
 
 /* === TOC (排名列表) — enhanced glass === */
@@ -757,8 +831,9 @@ footer {
 
 /* === Responsive === */
 @media (max-width: 600px) {
-  .hero-title { font-size: 2.8rem !important; }
+  .hero-title { font-size: 3.5rem !important; }
   .hero-subtitle { font-size: 1.1rem !important; }
+  .detail-hero-title { font-size: 1.6rem !important; }
   .hero-stats { gap: 1rem; }
   .hero-stat { padding: 0.8rem 1rem; }
   .hero-stat-value { font-size: 1.3rem; }

@@ -60,6 +60,40 @@
     });
   }
 
+  /** Inject AIHotNews logo + title at the top of detail pages */
+  function injectDetailHeader() {
+    // Only on detail pages (URL contains /summary-)
+    if (!location.pathname.match(/\/summary-/)) return;
+    var main = document.querySelector('.main-content');
+    if (!main || main.querySelector('.detail-hero')) return;
+
+    // Derive home URL from current path (strip date segments)
+    // e.g. /ai-consulting/2026/07/09/summary-zh.html -> /ai-consulting/
+    var parts = location.pathname.split('/').filter(Boolean);
+    var baseParts = [];
+    for (var i = 0; i < parts.length; i++) {
+      if (/^\d{4}$/.test(parts[i])) break;
+      baseParts.push(parts[i]);
+    }
+    var homeUrl = '/' + baseParts.join('/') + '/';
+
+    var hero = document.createElement('div');
+    hero.className = 'detail-hero';
+    hero.innerHTML =
+      '<a href="' + homeUrl + '" class="detail-hero-link">' +
+      '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">' +
+      '<defs><linearGradient id="detailLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">' +
+      '<stop offset="0%" stop-color="#06b6d4"/>' +
+      '<stop offset="50%" stop-color="#8b5cf6"/>' +
+      '<stop offset="100%" stop-color="#ef4444"/>' +
+      '</linearGradient></defs>' +
+      '<path fill="url(#detailLogoGrad)" d="M50 5 L62 38 L95 38 L68 58 L78 92 L50 72 L22 92 L32 58 L5 38 L38 38 Z"/>' +
+      '</svg>' +
+      '<span class="detail-hero-title">AIHotNews</span>' +
+      '</a>';
+    main.insertBefore(hero, main.firstChild);
+  }
+
   /** Wrap each news item (starting at `<a id="item-N">`) in a glass card */
   function wrapNewsItems() {
     var main = document.querySelector('.main-content');
@@ -91,6 +125,7 @@
     markSemanticElements();
     brandifyHeader();
     setupScrollProgress();
+    injectDetailHeader();
     wrapNewsItems();
   });
 })();
