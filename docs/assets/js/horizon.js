@@ -124,9 +124,43 @@
     }
   }
 
+  /** Wrap page-header h1 text in a gradient span (Cayman theme injects plain h1) */
+  function brandifyHeader() {
+    var h1 = document.querySelector('.page-header h1');
+    if (!h1) return;
+    var text = h1.textContent.trim();
+    if (text && !h1.querySelector('.brand-gradient')) {
+      h1.innerHTML = '<span class="brand-gradient">' + text + '</span>';
+    }
+    // Style RSS icon links inside section headers
+    document.querySelectorAll('.section-header .rss-icon').forEach(function (el) {
+      el.style.opacity = '0.6';
+      el.style.marginLeft = '0.4em';
+      el.style.verticalAlign = 'middle';
+      el.style.transition = 'opacity 0.2s';
+      el.addEventListener('mouseenter', function () { el.style.opacity = '1'; });
+      el.addEventListener('mouseleave', function () { el.style.opacity = '0.6'; });
+    });
+  }
+
+  /** Add scroll-progress bar at top of page */
+  function setupScrollProgress() {
+    var bar = document.createElement('div');
+    bar.id = 'scroll-progress';
+    bar.style.cssText = 'position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#00e5ff,#a855f7,#ff2e63);z-index:9999;transition:width 0.1s;';
+    document.body.appendChild(bar);
+    window.addEventListener('scroll', function () {
+      var h = document.documentElement;
+      var scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      bar.style.width = scrolled + '%';
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     processScoreBadges();
     markSemanticElements();
     setupLanguageToggle();
+    brandifyHeader();
+    setupScrollProgress();
   });
 })();

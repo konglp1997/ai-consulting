@@ -1,12 +1,12 @@
 theme: jekyll-theme-cayman
-title: Horizon Daily
-description: AI-curated daily digest of tech and research news
-baseurl: "/ai-consulting" # the subpath of your site, e.g. /blog
-url: "https://konglp1997.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+title: AIHotNews
+description: 每日 AI 前沿资讯 · AI-curated daily digest
+baseurl: "/ai-consulting"
+url: "https://konglp1997.github.io"
 
 # Build settings
 markdown: kramdown
-future: true # Allow future posts to be published
+future: true
 plugins:
   - jekyll-feed
 feed:
