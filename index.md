@@ -36,6 +36,40 @@ title: Home
   </div>
 </div>
 
+
+<div class="subscribe-section">
+  <div class="subscribe-card">
+    <div class="subscribe-icon">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </div>
+    <h3 class="subscribe-title">邮件订阅每日简报</h3>
+    <p class="subscribe-desc">每日 AI 前沿资讯自动送达你的邮箱，深度中文解读，绝不打扰。</p>
+    <div class="subscribe-steps">
+      <div class="subscribe-step">
+        <span class="step-num">1</span>
+        <span>向订阅邮箱发送一封邮件</span>
+      </div>
+      <div class="subscribe-step">
+        <span class="step-num">2</span>
+        <span>邮件主题填写「订阅」</span>
+      </div>
+      <div class="subscribe-step">
+        <span class="step-num">3</span>
+        <span>收到确认邮件即订阅成功</span>
+      </div>
+    </div>
+    <div class="subscribe-email-hint">
+      <span class="hint-label">订阅邮箱</span>
+      <code>aihotnews@qq.com</code>
+      <span class="hint-note">（即将开放，敬请期待）</span>
+    </div>
+    <p class="subscribe-unsub-hint">退订只需发送主题为「退订」的邮件即可。</p>
+  </div>
+</div>
+
 <div class="section-header">
   <span class="section-icon">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
