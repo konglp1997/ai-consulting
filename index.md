@@ -63,8 +63,7 @@ title: Home
     </div>
     <div class="subscribe-email-hint">
       <span class="hint-label">订阅邮箱</span>
-      <code>aihotnews@qq.com</code>
-      <span class="hint-note">（即将开放，敬请期待）</span>
+      <code>1476865658@qq.com</code>
     </div>
     <p class="subscribe-unsub-hint">退订只需发送主题为「退订」的邮件即可。</p>
   </div>
