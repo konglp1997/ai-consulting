@@ -227,5 +227,18 @@
       }
     },
     "headers": ""
+  },
+  "email": {
+    "enabled": true,
+    "smtp_server": "smtp.qq.com",
+    "smtp_port": 465,
+    "imap_server": "imap.qq.com",
+    "imap_port": 993,
+    "imap_enabled": true,
+    "email_address": "${AIHOTNEWS_EMAIL_ADDRESS}",
+    "password_env": "EMAIL_PASSWORD",
+    "sender_name": "AIHotNews Daily",
+    "subscribe_keyword": "订阅",
+    "unsubscribe_keyword": "退订"
   }
 }
