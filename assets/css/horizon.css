@@ -872,3 +872,145 @@ footer {
   background: rgba(99, 102, 241, 0.2);
   color: var(--ahn-text);
 }
+
+/* === Subscribe section — glass card === */
+.subscribe-section {
+  margin: 2.5rem 0 !important;
+  animation: fade-up 0.8s var(--ahn-ease) both;
+}
+
+.subscribe-card {
+  position: relative;
+  padding: 2.5rem 2rem !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
+  overflow: hidden;
+  text-align: center;
+}
+
+.subscribe-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ahn-gradient-brand);
+  opacity: 0.8;
+}
+
+.subscribe-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--ahn-glass);
+  border: 1px solid var(--ahn-glass-border);
+  color: var(--ahn-indigo);
+  margin-bottom: 1rem;
+  animation: logo-float 4s ease-in-out infinite;
+}
+
+.subscribe-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: var(--ahn-text) !important;
+  margin: 0 0 0.5rem !important;
+}
+
+.subscribe-desc {
+  color: var(--ahn-text-muted) !important;
+  font-size: 1rem !important;
+  margin: 0 auto 1.5rem !important;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.subscribe-steps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.subscribe-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--ahn-glass);
+  border: 1px solid var(--ahn-glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  color: var(--ahn-text) !important;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--ahn-gradient-brand);
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.subscribe-email-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subscribe-email-hint .hint-label {
+  font-size: 0.85rem;
+  color: var(--ahn-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.subscribe-email-hint code {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3em 0.8em;
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--ahn-indigo) !important;
+  border: 1px solid var(--ahn-glass-border);
+  border-radius: 8px;
+}
+
+.subscribe-email-hint .hint-note {
+  font-size: 0.8rem;
+  color: var(--ahn-amber);
+  font-weight: 500;
+}
+
+.subscribe-unsub-hint {
+  font-size: 0.8rem;
+  color: var(--ahn-text-dim);
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 600px) {
+  .subscribe-card {
+    padding: 2rem 1.2rem !important;
+  }
+  .subscribe-steps {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
