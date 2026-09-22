@@ -5,255 +5,320 @@ date: 2026-09-22
 lang: zh
 ---
 
-> 从 59 条内容中筛选出 10 条重要资讯。
+> 从 66 条内容中筛选出 13 条重要资讯。
 
 ---
 
-1. [小米发布 MiMo v2.6 开源权重模型系列，训练过程高度透明](#item-1) ⭐️ 8.0/10
-2. [NASA 火星采样返回任务实际上已被取消](#item-2) ⭐️ 8.0/10
-3. [Bryan Cantrill 回顾 Sun Microsystems 的战略失误](#item-3) ⭐️ 8.0/10
-4. [美国无限期暂停 800 美元以下进口免税豁免](#item-4) ⭐️ 8.0/10
-5. [npm 包 mathmain 中被发现隐藏的加密加载器](#item-5) ⭐️ 8.0/10
-6. [Cloudflare Python Workers 结束两年预览正式发布](#item-6) ⭐️ 8.0/10
-7. [MacStories 评测 M5 Ultra Mac Studio 的本地 AI 智能体表现](#item-7) ⭐️ 8.0/10
-8. [TypeSafe AI 发布首个“System One”决策模型 Jev](#item-8) ⭐️ 8.0/10
-9. [亚马逊 Bedrock 接入 Kimi K3，中国大模型首次以分成模式出海](#item-9) ⭐️ 8.0/10
-10. [M6 Mac mini 实测：多核追平 Intel 旗舰，GPU 接近翻倍](#item-10) ⭐️ 8.0/10
+1. [OpenAI 发布 GPT-6 Sol 与 Luna 模型](#item-1) ⭐️ 9.0/10
+2. [Anthropic 发布 Claude Opus 5.5，价格下调](#item-2) ⭐️ 9.0/10
+3. [五角大楼承认过度依赖 AI 导致伊朗学校遭袭](#item-3) ⭐️ 9.0/10
+4. [vLLM v0.30.0 发布：新增多款模型、GPU 权重缓存守护进程与量化升级](#item-4) ⭐️ 8.0/10
+5. [黑客声称窃取全部 FBI 员工数据](#item-5) ⭐️ 8.0/10
+6. [Trail of Bits 批评 SAML 是糟糕设计的分形](#item-6) ⭐️ 8.0/10
+7. [WordPress 修复可导致条件性 RCE 的未认证路径遍历漏洞](#item-7) ⭐️ 8.0/10
+8. [gzip 能充当语言模型吗？](#item-8) ⭐️ 8.0/10
+9. [OpenAI 为 GPT-6 增强提示缓存，新增断点与诊断功能](#item-9) ⭐️ 8.0/10
+10. [小米发布 MiMo-V2.6 多模态模型，强化学习训练成本仅 350 万美元](#item-10) ⭐️ 8.0/10
+11. [阿里发布真武 V900，宣称最强国产 AI 芯片，算力提升至 3 倍](#item-11) ⭐️ 8.0/10
+12. [DeepSeek 发布 DSec 沙箱平台：每日服务 300 万个实例](#item-12) ⭐️ 8.0/10
+13. [中国调查 DeepSeek 与月之暗面数据泄露事件](#item-13) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [小米发布 MiMo v2.6 开源权重模型系列，训练过程高度透明](https://mimo.xiaomi.com/mimo-v2-6) ⭐️ 8.0/10
+## [OpenAI 发布 GPT-6 Sol 与 Luna 模型](https://openai.com/index/introducing-gpt-6-sol-and-luna/) ⭐️ 9.0/10
 
-9 月 22 日，小米 MiMo 团队发布并开源 MiMo-V2.6 系列，包括定位旗舰的 MiMo-V2.6-Pro 和兼顾效率与成本的 MiMo-V2.6-Flash，两款均为原生全模态模型，覆盖编程、电脑操作、3D 场景与视听内容创作等任务。面向高吞吐场景的 Pro-UltraSpeed 也在逐步推出，小米称其在同等质量下输出速度最高可提升 20 倍，网页体验、API 和 Hugging Face 模型入口均已开放。 按算力计，这可能是开源模型团队迄今公开披露的规模最大的单次强化学习训练之一；其异常透明的发布方式——实时训练看板、详尽技术报告、7000 个环境和完整强化学习框架——抬高了开源权重 AI 中“开放”一词的门槛。这也进一步推动了由 DeepSeek、Qwen、Moonshot、Z.ai 等中国实验室主导的开源前沿模型趋势，而美国多数实验室仍将最大模型保持闭源。 MiMo-V2.6-Flash 总参数 309B、激活参数 15B，Pro 总参数 1.02T、激活参数 42B，显示其采用混合专家（MoE）架构。团队以 MixRL 联合训练中等难度、可验证的代码和智能体任务，再把游戏、3D 和主观评测等难验证或超长任务单独训练，并通过 MOPD 合并能力；同时还开放了由 MiMo 训练轨迹蒸馏的 Qwen 模型。
+OpenAI 发布了 GPT-6 Sol 和 GPT-6 Luna 两款新模型，以不同的能力与成本组合将前沿智能带入日常工作，现已在 API、Codex 和 ChatGPT 中上线。GPT-6 Luna 的价格仅为 GPT-5.6 Luna 的一半，且两款模型运行时消耗的 token 都比同级别的 GPT-5.6 模型更少。 大幅降价和 token 效率的提升可能会显著降低开发者和企业运行大规模 AI 工作负载的成本，而模型在 ChatGPT、Codex 和 API 中的同步上线则影响广泛的用户群体。此次发布也加剧了与 Anthropic 的 Claude 等对手在编程助手和智能体领域的竞争。 GPT-6 Sol 和 Luna 建立在 GPT-6 Astra 的技术进展之上，将其大部分优势带入更快、更经济的模型中。对于 GPT-6 Sol 和 Luna，欧盟数据驻留仅支持标准处理，而对于 2026 年 3 月 5 日及之后发布的模型，区域处理端点会收取 10% 的附加费。
 
-hackernews · volf_ · 9月21日 20:12 · [社区讨论](https://news.ycombinator.com/item?id=49792730)
+hackernews · OpenAI Blog · 9月22日 18:00 · [社区讨论](https://news.ycombinator.com/item?id=49805509)
 
-**背景**: 开源权重模型是指将训练好的学习参数（权重和偏置）公开发布的 AI 模型，任何人都可以下载和运行，但修改与再分发权限取决于具体许可证；这与完全开源 AI 不同，后者还会公开源代码、训练数据和中间检查点。DeepSeek、阿里云、Moonshot AI、Z.ai 等中国企业大多以 Apache 或 MIT 等宽松许可证发布开源权重模型，而 OpenAI、Anthropic、Google DeepMind 等美国实验室则偏好专有框架——这一分歧已成为常被描述为中美 AI 竞赛的重大地缘政治议题。
+**背景**: OpenAI 会定期发布新一代大语言模型，每一代通常都会在推理、速度和成本上较前代有所改进。GPT-6 Astra 是 GPT-6 系列中较早的旗舰模型，而 Sol 和 Luna 则是基于它衍生出的更高效变体。定价和 token 消耗是开发者的关键指标，因为 API 成本会随使用量增长，尤其是在智能体和编程类工作负载中。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://mimo.mi.com/docs/en-US/news/latest/v2-6">Xiaomi MiMo-V2.6 Series: 3 New Models Officially Released</a></li>
-<li><a href="https://mimo.xiaomi.com/mimo-v2-6">MiMo-V2.6 | Xiaomi</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Open-weight_model">Open-weight model</a></li>
+<li><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/">Introducing GPT‑6 Sol and Luna - OpenAI</a></li>
+<li><a href="https://9to5mac.com/2026/09/22/openai-upgrading-chatgpt-and-codex-with-two-more-gpt-6-models/">OpenAI upgrading ChatGPT and Codex with two more GPT-6 models</a></li>
+<li><a href="https://community.openai.com/t/announcing-gpt-6-sol-and-gpt-6-luna-in-the-api-codex-and-chatgpt/1399925">Announcing GPT-6 Sol and GPT-6 Luna in the API, Codex and ChatGPT</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者普遍赞赏小米的透明度，有人称实时训练看板是极佳的学习与教学工具，技术报告也异常详尽。也有人表示相比美国模型，如今对中国模型更感兴趣，主要原因是价格可负担；还有人认为凭借大规模电力和电网建设，中国长期看可能赢得 AI 竞赛，而美国受制于能源瓶颈。此外，多位用户分享了 Flash 与 Pro 的参数规模以及亲手做的“鹈鹕”测试渲染图。
+**社区讨论**: 评论者强调 GPT-6 Luna 相比 GPT-5.6 Luna 价格减半是一大亮点，simonw 还分享了鹈鹕基准测试的对比。开发者们就 Codex 与 Claude Code 的使用限制和套餐价值展开讨论，有人对上一代 GPT-5.6 Sol 模型产生了依恋，担心新模型虽然技术上更强但用起来不够自然。也有人称赞 ChatGPT 对普通用户而言整体产品质量出色。
 
-**标签**: `#LLM`, `#open-weights`, `#Xiaomi`, `#AI-race`, `#model-release`
+**标签**: `#OpenAI`, `#GPT-6`, `#AI models`, `#LLM`, `#model release`
 
 ---
 
 <a id="item-2"></a>
-## [NASA 火星采样返回任务实际上已被取消](https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead) ⭐️ 8.0/10
+## [Anthropic 发布 Claude Opus 5.5，价格下调](https://www.anthropic.com/claude-opus-5-5) ⭐️ 9.0/10
 
-NASA 与欧洲航天局联合开展的火星采样返回（MSR）任务——旨在取回毅力号火星车采集的样本——已于 2026 年实际上被取消。该项目于 2022 年获批，原计划在 2033 年前后带回样本，但成本超支和进度延误最终导致其终止。 此次取消标志着 NASA 旗舰行星科学项目的重大挫折，并将火星采样返回领域的领先地位让给了中国——中国的天问三号任务计划于 2028 年发射、2031 年前带回样本。这也引发了关于 JPL 管理、成本控制以及机器人探测与载人火星探索未来平衡的更广泛质疑。 MSR 项目包含三个部分：毅力号火星车采集样本、带上升飞行器的样本取回着陆器，以及地球返回轨道器。批评者指出，JPL 领导层将成本推高至约 110 亿美元，样本返回时间推迟到 2040 年，并且围绕阿丽亚娜 64 等传统火箭设计任务，而非采用星舰或新格伦等成本更低、运力更大的火箭。
+Anthropic 发布了 Claude Opus 5.5，这是其公开呼吁“为前沿技术减速（pacing the frontier）”之后的首个模型发布，全面下调了价格（每百万输入 token 从 5 美元降至 4 美元，输出从 25 美元降至 20 美元，缓存读取从 0.50 美元降至 0.20 美元，缓存写入从 6.25 美元降至 5 美元），并改进了沟通风格，使其表达更自然。该模型在发布前由 Frontier Design 和 METR 等外部评估机构进行了测试，并在 OpenRouter 上由五家供应商提供服务。 此次发布加剧了外界对领先实验室是否真的在放缓前沿开发的争论——它们究竟是在安全叙事下继续狂奔，还是确实在减速；而大幅降价也给竞争对手带来压力，因为像 DeepSeek 这样更便宜的模型正获得越来越多的关注。这也表明，沟通质量和长时间会话中的可用性正成为旗舰模型的关键差异化因素。 价格表显示，缓存读取降至每百万 token 0.20 美元，输入降至 4 美元，输出降至 20 美元，缓存写入降至 5 美元，使 Opus 5.5 明显比 Opus 5 便宜。Anthropic 称早期测试者发现其写作更清晰、更易理解，最重要的信息被放在前面，公司将其视为实用性和安全性双重收益。
 
-hackernews · Muhammad523 · 9月21日 19:14 · [社区讨论](https://news.ycombinator.com/item?id=49791939)
+hackernews · km144 · 9月22日 16:29 · [社区讨论](https://news.ycombinator.com/item?id=49803892)
 
-**背景**: 火星采样返回是行星科学长期追求的目标，因为将火星岩石和尘土带回地球可以进行远比火星车上的仪器更广泛的分析——尤其是寻找过去生命迹象。NASA 的毅力号火星车自 2021 年起一直在火星上专门为此目的封存样本。中国的天问三号是一项机器人双次发射任务，计划采集至少 500 克火星样本，并在 2031 年前后带回地球。
+**背景**: Anthropic 是一家美国 AI 公司，其 Claude 模型分为三个层级：Haiku（能力最弱）、Sonnet 和 Opus（能力最强）。“为前沿技术减速（pacing the frontier）”是一项提议，尤其由 Anthropic CEO Dario Amodei 提出，主张 AI 公司和政府应有意放缓越来越强大的前沿模型的开发速度，以便安全措施和监管能够跟上。DeepSeek 是一家中国 AI 公司，以极低成本发布开放权重的前沿模型而闻名，重塑了 LLM 市场的价格竞争格局。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mars_sample-return_mission">Mars sample-return mission</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Tianwen-3">Tianwen-3 - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/NASA-ESA_Mars_Sample_Return">NASA-ESA Mars Sample Return - Wikipedia</a></li>
+<li><a href="https://www.anthropic.com/claude-opus-5-5">Introducing Claude Opus 5 . 5 \ Anthropic</a></li>
+<li><a href="https://www.pacingthefrontier.com/">Pacing the Frontier</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek">DeepSeek - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者强调中国并行的天问三号项目构成迫在眉睫的竞争威胁，有人指出它将于 2028 年发射。一位 ExoMars 火星车项目的参与者表示，尽管地缘政治障碍重重，仍希望火星采样返回任务最终能够重启。其他人则尖锐批评 JPL 领导层成本超支、围绕传统火箭而非星舰进行设计，也有人认为投资可重复使用运载能力比投入数十亿美元的样本取回任务更明智。
+**社区讨论**: Hacker News 的评论者强烈质疑 Anthropic 的表述：有人指出其中的讽刺意味——第一行提醒读者“为前沿技术减速”的呼吁，而帖子其余部分却用具体数字证明 Anthropic 根本没有减速。也有人对降价表示欢迎，一位评论者强调 Opus 5 很可能是 OpenRouter 上支出最高的模型，而另一位则表示对便宜得多的 DeepSeek v4.1 在繁重的智能体任务上的表现很满意。
 
-**标签**: `#space-exploration`, `#NASA`, `#Mars`, `#JPL`, `#space-policy`
+**标签**: `#AI/ML`, `#LLM`, `#Anthropic`, `#Claude`, `#Model Release`
 
 ---
 
 <a id="item-3"></a>
-## [Bryan Cantrill 回顾 Sun Microsystems 的战略失误](https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/) ⭐️ 8.0/10
+## [五角大楼承认过度依赖 AI 导致伊朗学校遭袭](https://www.bloomberg.com/graphics/2026-iran-school-attack/) ⭐️ 9.0/10
 
-Bryan Cantrill 发表了题为《What Sun got wrong》的博客文章，分析了导致 Sun Microsystems 衰落的一系列战略与技术失误，并在 Hacker News 上引发了 488 分、272 条评论的热烈讨论。文章和讨论汇集了前 Sun 工程师与行业资深人士的第一手经验。 这篇回顾提供了一个高价值的案例研究，说明一家主导型科技公司如何因战略失误而失去市场地位，而社区讨论则补充了大量亲历者的历史背景。对于研究平台战略、供应商锁定以及商品化硬件崛起的人来说，这些内容都很有参考价值。 评论者指出了若干具体失误，例如 Sun 在 2002 年短暂取消 x86 平台上的 Solaris，这让不愿被锁定在 SPARC 上的客户感到失望；以及 2002 年未能与 Google 达成交易，因为 Sun 坚持要知道 Google 拥有多少台服务器。还有人提到 Sun 繁琐的企业销售流程与戴尔的直销模式形成鲜明对比，以及 Sun 在文化上更偏爱打造令人惊叹的技术，而非经营业务。
+五角大楼承认，过度依赖其 AI 目标定位系统 Project Maven，是导致伊朗米纳布一所学校遭导弹袭击的原因之一。该校因数据过时被错误标记为伊斯兰革命卫队设施。调查发现，美国“未能履行尽一切可能核实目标的义务”，且这一失误“超出了单纯疏忽的范畴”。 这是 AI 安全与治理领域的一个范式转变案例，表明将高风险军事决策委托给 AI 系统可能导致灾难性平民伤亡。它引发了关于法律责任、人类责任以及 AI 在战争中局限性的深刻问题，可能重塑军方部署和监管此类技术的方式。 官员指出，一些用户期望 Maven 能标记情报中的过时记录或矛盾之处，但尚不清楚他们为何认为系统会这样做；米纳布站点与其他候选目标一起被输入 Maven，并被推荐为打击目标。五角大楼将责任归咎于 Palantir 的软件，而 Palantir 则指向错误的数据输入，导致问责不明。
 
-hackernews · chmaynard · 9月21日 14:03 · [社区讨论](https://news.ycombinator.com/item?id=49787436)
+hackernews · devonnull · 9月22日 19:03 · [社区讨论](https://news.ycombinator.com/item?id=49806430)
 
-**背景**: Sun Microsystems 是一家成立于 1982 年的美国科技公司，开发并销售计算机、硬件以及 Solaris Unix 操作系统，同时还设计了 SPARC RISC 指令集架构。Solaris 孕育了 DTrace、ZFS 等具有影响力的技术，Sun 在互联网泡沫时期是一股重要力量，直到 2010 年被 Oracle 收购。讨论反思了 Sun 专有、高利润的模式如何在与商品化 x86 服务器和开源替代方案的竞争中陷入困境。
+**背景**: Project Maven 是美国国防部于 2017 年启动的一项计划，旨在加速机器学习与数据集成在军事情报工作流程中的应用，包括情报、监视和目标获取。它是五角大楼的旗舰 AI 项目，并处于美国对伊朗打击行动的核心，代表了现代战争最具深远意义的变革之一。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems">Sun Microsystems - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Solaris_operating_system">Solaris operating system</a></li>
-<li><a href="https://en.wikipedia.org/wiki/SPARC">SPARC - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Project_Maven">Project Maven - Wikipedia</a></li>
+<li><a href="https://www.euractiv.com/news/ai-at-war-five-things-to-know-about-project-maven/">AI at war: Five things to know about Project Maven | Euractiv</a></li>
+<li><a href="https://www.militarytimes.com/news/your-military/2026/09/16/ai-military-targeting-may-move-faster-than-humans-can-authenticate-critics-warn/">AI military targeting may move faster than humans can authenticate, critics warn</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区情绪既有怀旧也有分析，前客户和工程师分享了关于 Sun 销售流程困难、2000 年代战略失误以及工程优先文化的第一手轶事。一些评论者认为 Sun 从未真正对经营业务感兴趣，另一些人则回忆起使用 Sun 瘦客户机以及 Pine、vi 等工具的愉快经历。还有一位评论者用 Sun 股价的崩盘来警示当今估值高企的 AI 和科技股票。
+**社区讨论**: 评论者就根本原因展开辩论，一些人认为 AI 并非真正的罪魁祸首，而是人为疏忽；另一些人则强调，人类必须对 AI 辅助决策负责，尤其是在导致平民死亡时。许多人批评五角大楼和 Palantir 都缺乏问责，并警告说，误解 AI 的局限性会导致危险的过度依赖。
 
-**标签**: `#Sun Microsystems`, `#tech history`, `#Solaris`, `#SPARC`, `#industry analysis`
+**标签**: `#AI ethics`, `#military AI`, `#accountability`, `#AI safety`, `#Pentagon`
 
 ---
 
 <a id="item-4"></a>
-## [美国无限期暂停 800 美元以下进口免税豁免](https://www.personalimportation.org/advocacy) ⭐️ 8.0/10
+## [vLLM v0.30.0 发布：新增多款模型、GPU 权重缓存守护进程与量化升级](https://github.com/vllm-project/vllm/releases/tag/v0.30.0) ⭐️ 8.0/10
 
-美国政府宣布无限期暂停对价值 800 美元或以下进口商品的 de minimis 行政豁免，相关通知于 2026 年 6 月 24 日刊登在《联邦公报》上。此举取消了低价值邮件货物的免税待遇，并引入了新的邮政非正式入境程序。 这一政策转变对消费者、电子商务企业和国际邮件流动产生重大影响，因为它取消了长期存在的、促进低成本进口的豁免。它可能提高日常商品成本并扰乱供应链，尤其影响依赖跨境购买廉价药品和其他必需品的个人。 该暂停适用于邮件货物和邮政非正式入境，美国海关与边境保护局（CBP）正在测试新的电子非正式入境类型 13——非正式邮件入境。值得注意的是，该规则并未禁止进口处方药，但取消了其关税豁免，意味着此类物品仍可进口但需缴纳相应关税。
+vLLM 发布了 v0.30.0，这是一个包含来自 315 位贡献者（其中 104 位新贡献者）的 762 次提交的重大更新，新增了对 DeepSeek-V4.1-Flash、DeepSeek-V4-Flash-Vision-Exp、GLM-5.3-Flash、K2-Horizon、Cohere Compass、Bailing V3 VL 和 Nanbeige4.2 等模型的支持。该版本还引入了持久化的每 GPU 权重缓存守护进程（通过 `--load-format ipc_cache` 实现引擎快速重启）、Gumbel-max 水印、HiSparse 主机驻留 KV 分层，以及大量性能和量化改进。 vLLM 是目前使用最广泛的开源大语言模型推理与服务引擎之一，因此本次发布直接影响开发者部署和扩展生产模型的方式。Fast Start 权重缓存守护进程以及新的量化/后端特性可以显著降低重启延迟并提升大规模服务吞吐量，而广泛的模型支持则使 vLLM 与快速演进的开放权重模型生态保持同步。 Fast Start 守护进程将量化后、按 TP 分片的权重保存在 GPU 内存中，并通过 CUDA IPC 提供给新引擎，目前还覆盖了 FP4 检查点和多节点 TP。其他值得注意的细节包括：在 SM100 上通过 FlashMLA V4.1 为 DeepSeek-V4.1-Flash 提供 MXFP8 KV 存储、带有 AVX512/AMX 稀疏 MLA 内核的 DeepSeek-V4 CPU 后端，以及通过 `quantization_config.targets` 实现的有针对性在线量化。
 
-hackernews · burnt-resistor · 9月21日 20:58 · [社区讨论](https://news.ycombinator.com/item?id=49793322)
+github · khluu · 9月22日 05:20
 
-**背景**: De minimis 是一个拉丁法律术语，意为“关于微小事物”，在贸易政策中指低于某一门槛的进口商品可免关税和简化海关程序。美国此前设有 800 美元的 de minimis 门槛，允许大多数低价值货物以免税和最少文书方式入境。特朗普政府于 2025 年开始暂停对所有国家的免税 de minimis 待遇，而此次最新行动使邮件货物的暂停变为无限期。
+**背景**: vLLM 是一个高效服务大语言模型的开源引擎，以 PagedAttention 等管理 KV 缓存内存的技术而闻名。MXFP8 是由开放计算项目（Open Compute Project）定义的微缩放 FP8 格式，它在块级别（通常以 32 个元素为一组）应用缩放因子，从而提高量化精度。FlashMLA 是 DeepSeek 为多头潜在注意力（MLA）优化的注意力内核库，旨在让长上下文解码更快、更便宜。权重缓存守护进程是一个持久化进程，它将模型权重保留在 GPU 内存中，使重启的推理引擎可以通过零拷贝 IPC 映射这些权重，而无需从磁盘重新加载。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.federalregister.gov/documents/2026/06/24/2026-12668/test-of-the-new-electronic-informal-entry-process-for-mail">Test of the New Electronic Informal Entry Process for Mail</a></li>
-<li><a href="https://www.whitehouse.gov/presidential-actions/2025/07/suspending-duty-free-de-minimis-treatment-for-all-countries/">Suspending Duty-Free De Minimis Treatment for All Countries</a></li>
-<li><a href="https://www.npr.org/2025/08/28/nx-s1-5519361/de-minimis-rule-tariffs-consumers-imports-trump">De minimis is ending. What does that mean for U.S. consumers ...</a></li>
+<li><a href="https://docs.vllm.ai/en/stable/api/vllm/model_executor/model_loader/weight_cache/daemon/">daemon - vLLM</a></li>
+<li><a href="https://github.com/vllm-project/vllm/issues/56049">[Feature]: Fast Start For vLLM · Issue #56049 · vllm-project/vllm</a></li>
+<li><a href="https://github.com/deepseek-ai/FlashMLA">GitHub - deepseek-ai/ FlashMLA : FlashMLA : Efficient Multi-head...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者强烈担忧此举对从加拿大进口廉价药品的美国人的影响，有人称其“悲剧”，并指出许多人依赖仿制药来应对医疗费用。其他人强调了中期选举前的政治时机，并澄清该规则并未禁止处方药进口，而是取消了关税豁免；一位评论者将加拿大药房描述为美国破碎医疗体系的“胶带”。
-
-**标签**: `#trade policy`, `#de minimis`, `#imports`, `#healthcare`, `#e-commerce`
+**标签**: `#vLLM`, `#LLM inference`, `#model serving`, `#release`, `#GPU optimization`
 
 ---
 
 <a id="item-5"></a>
-## [npm 包 mathmain 中被发现隐藏的加密加载器](https://safedep.io/mathmain-encrypted-loader/) ⭐️ 8.0/10
+## [黑客声称窃取全部 FBI 员工数据](https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/) ⭐️ 8.0/10
 
-SafeDep 的安全分析发现，npm 包 mathmain@1.0.0（一个复制流行数学库 mathjs 的包）中包含一个加密加载器，只有当传入一个特定的 3x3 矩阵作为输入时，它才会解密并执行其有效载荷。该加载器隐藏了一个远程访问植入程序，而后续分析发现攻击的第二阶段实际上是失效的。 这一事件凸显了 npm 供应链攻击日益复杂化，恶意代码被隐藏在加密加载器之后，并且只在罕见条件下触发以逃避检测。它影响到依赖第三方包的 JavaScript 开发者和组织，也加剧了关于 CommonJS 的动态 require() 是否比 ESM 的静态导入更容易隐藏此类攻击的争论。 该加密加载器将解密逻辑分散在同一个包内的多个文件中，触发条件是一个特定的 3x3 矩阵，这似乎是一个刻意设置、难以猜测的条件。mathmain@1.0.0 仍然可以在 npm 注册表中获取，而作者的 GitHub 仓库和账户已被删除。
+一个据称是 ShinyHunters 的黑客组织声称窃取了全部 FBI 员工的数据，并表示其目的并非金钱，而是某种形式的“胁迫”。该消息由 404 Media 报道，目前尚未得到 FBI 或其他权威机构的独立证实。 如果该声明得到证实，如此规模的泄露将构成重大国家安全事件，暴露联邦执法人员的敏感个人与职业数据，可能被用于间谍活动或针对性攻击。这也凸显出即便是资源充足的政府机构，也面临来自复杂网络攻击的日益严重的风险。 据报道，黑客对 404 Media 表示其动机是“胁迫”而非为钱财进行勒索，且尚未公开提供数据证据。该声明仍未得到证实，目前不清楚实际获取了多少条记录（如果有的话），也不清楚具体包含哪些类型的信息。
 
-hackernews · abhisek · 9月21日 18:33 · [社区讨论](https://news.ycombinator.com/item?id=49791378)
+hackernews · spenvo · 9月22日 17:46 · [社区讨论](https://news.ycombinator.com/item?id=49805278)
 
-**背景**: npm 是世界上最大的软件注册表，拥有超过两百万个 JavaScript 包，针对它的供应链攻击越来越常见，包括 2025 年 11 月攻陷维护者账户的 Sha1-Hulud（Shai-Hulud 2.0）行动。加密加载器是一种将恶意代码混淆并仅在运行时解密的技术，使得静态分析和搜索可疑调用变得更加困难。CommonJS 使用难以审计的动态 require() 调用，而 ESM 的静态 import 语句更容易被分析工具检查。
+**背景**: 国家支持的黑客攻击和网络间谍活动日益普遍，民族国家和犯罪团伙以政府数据库为目标，以获取情报、制造混乱或施加影响。一个著名的先例是 2015 年美国人事管理办公室（OPM）数据泄露事件，中国被指控窃取了约 2210 万名美国政府雇员的记录。此类事件引发了关于如何保护大型集中式敏感个人数据存储的争论。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://safedep.io/mathmain-encrypted-loader/?ref=upstract.com">Why Does an npm Math Library Need an Encrypted Loader?</a></li>
-<li><a href="https://news.ycombinator.com/item?id=49791378">Why Does an NPM Math Library Need an Encrypted Loader ?</a></li>
-<li><a href="https://grokipedia.com/page/Sha1-Hulud_npm_supply_chain_attack">Sha1-Hulud npm supply chain attack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State-sponsored_hacking">State-sponsored hacking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Archive.ph">Archive.ph</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者对选择特定 3x3 矩阵作为触发条件感到困惑，其中一人指出破解版本显示第二阶段完全失效。其他人则认为这提醒人们应放弃 CommonJS 转而使用 ESM，因为动态 require() 比动态 import() 更难被搜索到，还有一位评论者质疑执法部门是否会跟进此类后门，以及为什么该包仍在 npm 上活跃且没有任何警告。
+**社区讨论**: 评论者普遍对任何大型机构保护敏感数据库的能力表示悲观，有人引用 2015 年 OPM 泄露事件作为证据，认为国家行为者很可能已经掌握了此类数据。其他人则将其与《太空堡垒卡拉狄加》中物理隔离系统的虚构场景相类比，也有人嘲讽黑客声称的非金钱动机，或批评 FBI 的能力。
 
-**标签**: `#security`, `#supply-chain`, `#npm`, `#malware`, `#javascript`
+**标签**: `#cybersecurity`, `#data breach`, `#FBI`, `#hacking`, `#national security`
 
 ---
 
 <a id="item-6"></a>
-## [Cloudflare Python Workers 结束两年预览正式发布](https://blog.cloudflare.com/python-workers-ga/) ⭐️ 8.0/10
+## [Trail of Bits 批评 SAML 是糟糕设计的分形](https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/) ⭐️ 8.0/10
 
-Cloudflare 宣布 Python Workers 正式全面可用（GA），在经历两年公开测试后，Python 成为其服务端 Workers 平台上的一等公民、完全受支持的语言。该运行时通过 Pyodide/Emscripten 将 Python 编译为 WebAssembly 执行，并新增对 Workers AI、R2、D1 等服务的原生绑定，使 FastAPI、Django、Flask 等框架无需 JavaScript 胶水代码即可在边缘运行。 这是一个重要的平台里程碑，因为它让庞大的 Python 开发者群体能够把现有代码和框架直接部署到 Cloudflare 的全球边缘网络，可能减少为使用边缘计算而重写为 JavaScript 或 TypeScript 的需要。这也表明 WebAssembly 作为多语言无服务器运行时的势头正在增强，并加剧了与 Wasmer 等边缘平台之间的竞争。 由于 Python Workers 运行在 WebAssembly 沙箱中，带有原生 C、C++ 或 Rust 扩展的包必须先交叉编译为 WebAssembly；Cloudflare 此前不得不自行编译和托管这类包，这限制了可用的库。社区讨论还提出了冷启动性能方面的疑问，并指出 Pyodide/Emscripten 支持正通过 PEP 783 进行标准化。
+Trail of Bits 发布了一篇题为《SAML：糟糕设计的分形》的博客文章，对安全断言标记语言（SAML）的安全性和设计缺陷进行了批判性分析。该文章在 Hacker News 上引发了包含 73 条评论的热烈讨论，将 SAML 与 OpenID Connect（OIDC）进行比较，并分享了现实世界中的实现恐怖故事。 SAML 仍广泛用于企业单点登录（SSO），因此其设计缺陷对依赖它的组织具有广泛的安全影响。讨论强调，尽管 OIDC 正在逐渐取代 SAML，但两种协议都存在漏洞，企业在实践中仍需同时支持两者。 文章列举了 SAML 的漏洞，但未对 OIDC 进行同等比较，而 OIDC 自身也存在问题，如 JWT 算法混淆、none 算法攻击、缺少受众检查以及 JOSE 库中的错误。SAML 的 XML 签名实现历来是严重漏洞的来源，包括签名包装攻击。
 
-hackernews · torutofu · 9月21日 13:38 · [社区讨论](https://news.ycombinator.com/item?id=49787142)
+hackernews · aray07 · 9月22日 18:57 · [社区讨论](https://news.ycombinator.com/item?id=49806335)
 
-**背景**: Cloudflare Workers 是一个无服务器边缘计算平台，在 Cloudflare 覆盖 300 多个地点的全球网络上执行代码，传统上使用 JavaScript、TypeScript 或 WebAssembly。Pyodide 是 CPython 到 WebAssembly/Emscripten 的移植，使标准 Python 代码和纯 Python 包能够在受限环境中运行。WebAssembly 是一种可移植的二进制指令格式，让 JavaScript 之外的语言也能在沙箱中高效运行，但原生扩展模块必须重新编译才能以它为目标。
+**背景**: SAML（安全断言标记语言）是一种基于 XML 的标准，用于在身份提供者和服务提供者之间交换认证和授权数据，常用于企业 SSO。OIDC（OpenID Connect）是构建在 OAuth 2.0 之上的较新认证层，使用 JSON Web Token（JWT）而非 XML。两种协议都旨在让用户一次登录即可访问多个应用，但在复杂性、生态系统支持和安全记录方面有所不同。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://blog.cloudflare.com/python-workers?ref=upstract.com/">Bringing Python to Workers using Pyodide and WebAssembly</a></li>
-<li><a href="https://www.brocker.org/cloudflare-python-workers-general-availability">Cloudflare Python Workers Reach General Availability</a></li>
-<li><a href="https://www.technobezz.com/news/cloudflare-python-workers-general-availability">Cloudflare Makes Python Workers Generally Available | Technobezz</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SAML">SAML - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenID">OpenID - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Single_sign-on">Single sign-on - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 一位 urllib3 维护者澄清，上游的 Pyodide/Emscripten 和 JSPI 支持是几年前由外部贡献者提交并合并的，相关资金流向了该贡献者而非维护者。Wasmer 的 CEO 称赞了 Cloudflare 的进展，尤其是通过 PEP 783 实现的包标准化，但也指出了仍存在的架构问题；其他评论者则询问冷启动性能，并对标题措辞开了玩笑。
+**社区讨论**: 评论者指出，文章批评 SAML 却没有同等审视 OIDC 自身的缺陷，如 JWT 算法混淆和缺少受众检查。其他人则认为 SAML 仍具有 OIDC 所缺乏的企业特定功能，如 IdP 发起的流程，并且 OIDC 规范支持不一致，使得 SAML 稳定的平庸在某些情况下更可取。还有几人分享了关于 XML 签名验证错误和 SCIM 集成负担的恐怖故事。
 
-**标签**: `#Cloudflare Workers`, `#Python`, `#WebAssembly`, `#Serverless`, `#Edge Computing`
+**标签**: `#SAML`, `#OIDC`, `#authentication`, `#security`, `#SSO`
 
 ---
 
 <a id="item-7"></a>
-## [MacStories 评测 M5 Ultra Mac Studio 的本地 AI 智能体表现](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/) ⭐️ 8.0/10
+## [WordPress 修复可导致条件性 RCE 的未认证路径遍历漏洞](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp) ⭐️ 8.0/10
 
-MacStories 发布了对苹果新款 M5 Ultra Mac Studio 的详细评测，重点考察本地 AI 推理性能，并与 Nvidia RTX 5090 进行了 token 生成速度对比。评测中的图表显示，在 Qwen3 27B 模型上，M5 Ultra 在 8K 提示长度下达到每秒 48 个 token，而 RTX 5090 为每秒 59 个 token，上一代 M3 Ultra 仅为每秒 31 个 token。 这篇评测提供了首批关于苹果 M5 Ultra 本地大语言模型推理性能的独立基准测试之一，有助于 AI/ML 从业者和开发者判断高端 Mac Studio 能否替代或补充云端 AI 订阅服务。与 RTX 5090 的对比以及 Hacker News 上 225 条评论的讨论，凸显了成本效益、内存带宽和开发者生产力等关键决策因素。 基准测试图表显示，随着提示长度从 8K 增长到 256K，M5 Ultra 的生成速度从每秒 48 个 token 降至 24 个，而 RTX 5090 从 59 降至 44，并且完全无法处理 256K 长度。社区成员指出，512GB 内存配置预计在 10 月推出，可能使顶配 Mac Studio 价格超过 15000 美元，还有人建议与双 DGX Spark 系统进行对比。
+WordPress 发布了 7.1.2 版本，修复了一个可导致条件性远程代码执行（RCE）的严重未认证路径遍历漏洞，并出于对旧版本用户的照顾，将该修复向后移植到 4.7 以来的所有分支。 该漏洞影响庞大的用户群体，因为 WordPress 驱动着互联网上很大一部分网站，而且未认证的特性意味着攻击者无需任何凭据即可利用，可能导致网站被完全攻陷。 该漏洞涉及对传递给 locate_template() 等函数的用户提供模板名称验证不足，这些函数无法防止目录遍历，补丁已在 WordPress 开发仓库的提交 9c4e85 中被确认。
 
-hackernews · piotrgrabowski · 9月21日 13:53 · [社区讨论](https://news.ycombinator.com/item?id=49787313)
+hackernews · vntok · 9月22日 16:33 · [社区讨论](https://news.ycombinator.com/item?id=49803959)
 
-**背景**: 苹果 M5 Ultra 是该公司为 Mac Studio 推出的新一代旗舰 Apple Silicon 芯片，采用四晶粒架构，将两颗 M5 Max 芯片融合为单一 SoC。本地 AI 推理是指在自有硬件上直接运行大语言模型，而非通过云端 API，这样可以提升隐私性并减少持续费用。Nvidia RTX 5090 是基于 Blackwell 架构的旗舰消费级 GPU，配备 32GB GDDR7 显存，常被用作本地 AI 性能的参考基准。
+**背景**: 路径遍历（也称为目录遍历或点-点-斜杠攻击）利用对用户提供的文件名验证不足，使攻击者能够访问预期目录之外的文件。远程代码执行（RCE）是一种严重的漏洞，允许攻击者远程在目标系统上运行任意恶意代码，通常会导致系统完全被攻陷。WordPress 是一个广泛使用的开源内容管理系统（CMS），驱动着数百万个网站，因此其安全问题影响尤为重大。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/">Apple introduces new Mac Studio with M5 Max and M5 Ultra - Apple</a></li>
-<li><a href="https://en.wikipedia.org/wiki/RTX_5090">RTX 5090</a></li>
-<li><a href="https://www.apple.com/mac-studio/">Mac Studio - Apple</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Path_traversal_vulnerability">Path traversal vulnerability</a></li>
+<li><a href="https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/remote-code-execution/">What is Remote Code Execution (RCE)? | CrowdStrike</a></li>
+<li><a href="https://wptavern.com/wordpress-security-team-discusses-backporting-security-releases-to-fewer-versions">WordPress Security Team Discusses Backporting Security ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者普遍认为，对于重度本地 AI 使用场景，M5 Ultra 相比云端订阅更具成本效益，但质疑开发者能否达到 20 倍订阅计划的生产力水平。有人对顶配机型的高昂总价表示担忧，还有人认为需要更多真实编程基准测试以及与其他平台（如双 DGX Spark）的对比，才能得出明确结论。
+**社区讨论**: 评论者指出约三分之一的 WordPress 安装未使用最新的 7.x 分支，一些人批评 WordPress 的安全记录，称其为网络历史上最易受攻击的软件之一。其他人分享了迁移到 Hugo 等静态站点生成器以规避此类漏洞的积极经验，还有评论者指出，9 年前关于 locate_template() 的文档评论就预言了这一确切缺陷。
 
-**标签**: `#Apple Silicon`, `#Local AI`, `#LLM Inference`, `#Hardware Benchmarks`, `#Mac Studio`
+**标签**: `#security`, `#wordpress`, `#vulnerability`, `#rce`, `#path-traversal`
 
 ---
 
 <a id="item-8"></a>
-## [TypeSafe AI 发布首个“System One”决策模型 Jev](https://simonwillison.net/2026/Sep/21/jev/) ⭐️ 8.0/10
+## [gzip 能充当语言模型吗？](https://nathan.rs/posts/gzip-lm/) ⭐️ 8.0/10
 
-TypeSafe AI 发布了 Jev，这是其称为“System One 模型”（也被称为“决策模型”）的新模型类别的首个实例，它接受非结构化文本输入，但返回类型化的概率输出，例如类别概率、是/否置信度分数和数值评分，而不是生成文本。Jev 的定价为每百万输入 token 0.042 美元，输出 token 免费，比 OpenAI 的 GPT-5 Nano（每百万输入 token 0.05 美元）更便宜。 这标志着从文本生成型 LLM 向输出类型化、机器可直接消费结果的专用决策模型的重大转变，可能使 AI 分类、排序和过滤任务变得更快、更便宜。同时，它也引发了关于透明度和偏见的重要担忧，因为这些模型只返回一个浮点数，而不解释其决策依据。 Jev 支持三种问题类型：“Noul”是/否问题（Bernoulli 的缩写），返回 0 到 1 之间的置信度分数；选择题，返回所提供选项的概率分布；评分题，返回数值范围内的浮点值。它接受单个“state”对象（字符串、字符串数组或名称-值对），并并行评估多个问题，因此发送多个问题所需时间与发送一个问题大致相同。
+nathan.rs 上的一篇文章探讨了 gzip 压缩算法能否充当语言模型，在 Hacker News 上引发了热烈讨论（368 分、145 条评论），涉及压缩与预测之间的深层联系。 这一点很重要，因为它凸显了数据压缩与语言建模之间的根本理论联系，这一联系是现代大语言模型的基础，并被 3Blue1Brown 和 DeepMind 的《Language Modeling Is Compression》等近期研究广泛传播。 讨论指出，gzip 可以通过将测试文件与特定领域的文件一起压缩并选择输出最小的文件来对文本进行主题分类，但作为语言模型，它只能提供合理性的下界，因为可能续写的搜索空间太大，无法进行有意义的探索。
 
-rss · Simon Willison · 9月21日 23:09
+hackernews · networked · 9月22日 06:08 · [社区讨论](https://news.ycombinator.com/item?id=49797323)
 
-**背景**: 大型语言模型（LLM）通常按输入和输出 token 计费，其中输出 token 费率更高，并且它们生成自由文本，开发者必须自行解析。TypeSafe AI 是一家成立于 2024 年、总部位于旧金山的公司，它将 Jev 定位为“前沿智能函数调用”：输入非结构化状态，输出类型化的概率决策，面向垃圾邮件检测、标签建议、优先级排序和搜索重排等分类式任务。“System One”这一名称与较慢、审慎的“System Two”推理模型形成对比，不过 Maggie Appleton 等评论者更倾向于“决策模型”这一说法。
+**背景**: gzip 是一种广泛使用的文件压缩工具，基于 Deflate 算法，该算法结合了 LZ77 和 Huffman 编码。信息论表明，任何预测模型都可以转换为无损压缩器，反之亦然，这意味着压缩性能与预测质量直接相关。这种理论等价性最近在大语言模型上得到了探索，这些模型可以作为强大的通用压缩器。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Jev_(AI_model)">Jev (AI model) - Wikipedia</a></li>
-<li><a href="https://www.langchain.com/blog/building-a-harness-with-jev">What Is Jev? A Guide to TypeSafe AI's System One Model - LangChain</a></li>
-<li><a href="https://www.requesty.ai/blog/typesafe-jev-explained">TypeSafe Jev explained: how it works, LLM differences and... | Requesty</a></li>
+<li><a href="https://arxiv.org/abs/2309.10668">[2309.10668] Language Modeling Is Compression - arXiv.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gzip">gzip - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 包括 Simon Willison 和 Maggie Appleton 在内的评论者就命名展开了讨论，Appleton 更倾向于“决策模型”而非“System One 模型”。Willison 还提出担忧，认为 Jev 代表着向黑箱机器学习的倒退，因为它只返回一个浮点数而不提供任何理由，并警告偏见问题应被置于首位，尤其是在对求职者进行排名等高风险用途中。
+**社区讨论**: 评论者强调了怀卡托大学 Witten 团队在利用压缩进行文本分类方面的历史工作，引用了 3Blue1Brown 关于该主题的视频系列，并提到了 ts_zip 和 Hutter Prize 等相关项目。一些人对 gzip 搜索可能续写空间的能力表示怀疑，而另一些人则指出了压缩与下一词预测之间的直观联系。
 
-**标签**: `#LLM`, `#AI Models`, `#Decision Models`, `#Probabilistic Inference`, `#TypeSafe AI`
+**标签**: `#compression`, `#language-modeling`, `#gzip`, `#information-theory`, `#machine-learning`
 
 ---
 
 <a id="item-9"></a>
-## [亚马逊 Bedrock 接入 Kimi K3，中国大模型首次以分成模式出海](https://36kr.com/newsflashes/3992769217428488) ⭐️ 8.0/10
+## [OpenAI 为 GPT-6 增强提示缓存，新增断点与诊断功能](https://openai.com/index/better-prompt-caching-for-gpt-6) ⭐️ 8.0/10
 
-亚马逊云科技宣布其大模型服务平台 Amazon Bedrock 正式上架月之暗面的开源模型 Kimi K3，全球企业开发者可直接通过 Bedrock 调用。此前传闻的 Kimi 与海外云厂商收入分成合作由此正式落地。 这是中国大模型公司首次以收入分成模式向全球三大云厂商输出模型能力，标志着中国 AI 企业出海商业化的新范式。这也印证了 Kimi 相对美国前沿模型的竞争力，可能促使更多中国大模型厂商寻求类似的云厂商合作。 Kimi K3 是一个 2.8 万亿参数的开源多模态智能体模型，支持 100 万 token 上下文，基于 Kimi Delta Attention（KDA）和 Attention Residuals 构建。其自定义许可要求年收入超过 2000 万美元的推理服务商分成最高 30%，而月之暗面据称正与多家海外云厂商推进类似的分成合作。
+OpenAI 宣布为 GPT-6 改进提示缓存功能，带来更高的缓存命中率、全新的诊断工具、显式断点，以及旨在降低延迟和成本的多种控制选项，面向使用该 API 的开发者。 提示缓存直接影响基于 GPT-6 构建的应用的经济性和响应速度，因此更高的命中率和显式控制能够显著降低大规模运行长而重复提示的开发者所承担的 token 成本和响应时间。 此次更新引入了显式断点，允许开发者精确标记哪些提示前缀应被缓存，同时提供用于监控缓存行为的诊断工具；显式缓存写入通常按溢价计费（约为普通输入价格的 1.25 倍）。
 
-telegram · zaihuapd · 9月21日 06:44
+rss · OpenAI Blog · 9月22日 21:00
 
-**背景**: Amazon Bedrock 于 2023 年推出，是 AWS 的全托管无服务器平台，通过统一 API 提供多家 AI 公司的基础模型，与 Microsoft Foundry 和 Google Cloud 形成竞争。月之暗面是一家 2023 年 3 月成立于北京的公司，为中国“AI 六小虎”之一，其 2026 年 7 月发布的 Kimi K3 以 2.8 万亿参数成为史上最大的开源权重模型。与云厂商分成是中国大模型厂商较新的变现方式，此前它们主要依赖直接 API 销售和国内云平台上架。
+**背景**: 提示缓存是一种技术，LLM 提供商会存储重复提示前缀的处理结果，使后续复用该前缀的请求无需重新计算，从而节省时间和费用。不同提供商触发缓存的方式各异：有的自动检测前缀，有的则要求显式标记或断点。缓存命中率（即由缓存提供服务的请求占比）是判断缓存是否真正带来收益的关键指标。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Amazon_Bedrock">Amazon Bedrock</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Kimi_(AI)">Kimi (AI) - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Moonshot_AI">Moonshot AI</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/prompt-caching">Prompt caching | OpenAI API</a></li>
+<li><a href="https://redis.io/blog/what-is-prompt-caching/">What Is Prompt Caching? LLM Speed & Cost Guide - Redis</a></li>
+<li><a href="https://openrouter.ai/docs/guides/best-practices/prompt-caching">Prompt Caching - Optimize AI Model Costs with Smart Caching</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI/ML`, `#Cloud Computing`, `#Kimi`, `#AWS Bedrock`, `#Business Model`
+**标签**: `#OpenAI`, `#GPT-6`, `#prompt caching`, `#LLM`, `#API optimization`
 
 ---
 
 <a id="item-10"></a>
-## [M6 Mac mini 实测：多核追平 Intel 旗舰，GPU 接近翻倍](https://www.bilibili.com/video/BV1JQhz6fE1x) ⭐️ 8.0/10
+## [小米发布 MiMo-V2.6 多模态模型，强化学习训练成本仅 350 万美元](https://www.reddit.com/r/MachineLearning/comments/1wn36d4/xiaomi_releases_mimov26_frontier_intelligence_all/) ⭐️ 8.0/10
 
-极客湾对新款 M6 Mac mini 的实测显示，其 CPU 采用 2+4+6 核新布局，基于台积电 N2 工艺，超大核频率达 4.8 GHz，多核性能已与 Intel Panther Lake 的 Core Ultra X9 388H 打平，单核继续领先，整体较 M4 提升超过 50%。GPU 升级至 12 核，游戏性能接近 M4 的两倍，光追表现大幅增强。 这是首批针对苹果首款 2nm 芯片的详细第三方实测之一，表明 Apple Silicon 在多核负载上已能与 Intel 旗舰移动 CPU 正面抗衡，同时保持单核领先。GPU 与光追性能接近翻倍，也让 Mac mini 在游戏和 GPU 加速创作场景中更具竞争力，对 Intel Panther Lake 以及入门级独立显卡都构成压力。 M6 采用 2+4+6 核配置，超大核频率 4.8 GHz，功耗控制较为克制：CPU 满载约 25W，CPU+GPU 双烤整机约 65W。12 核 GPU 新增硬件光追、更新的着色器核心架构和 Dynamic Caching，苹果称其 AI 性能较 M5 提升 30%。
+小米正式发布了 MiMo-V2.6 系列模型，这是一组原生全模态（omni-modal）AI 模型，官方称其达到前沿水平的智能表现，而强化学习训练总成本仅为 350 万美元。此次发布还附带一个实时更新的“benchmaxxing”仪表盘，并采用“built in public”（公开构建）的方式推进，模型页面位于 mimo.xiaomi.com/mimo-v2-6。 如果 350 万美元的强化学习训练成本属实，这将相比通常需要数千万甚至数亿美元的前沿模型训练成本实现大幅降低，可能显著降低其他实验室和企业构建有竞争力多模态系统的门槛。同时，小米的入局也加剧了消费硬件厂商与中国 AI 实验室在开源前沿模型领域的竞争。 MiMo-V2.6 系列据称包含三款新模型，其中旗舰推理模型为全模态、万亿参数规模，面向专业工作流。该发布强调智能、效率与成本之间的平衡，而实时仪表盘旨在随着模型开发透明地追踪基准测试表现。
 
-telegram · zaihuapd · 9月21日 16:32
+reddit · r/MachineLearning · /u/we_are_mammals · 9月22日 07:56
 
-**背景**: 苹果 M 系列芯片是集 CPU、GPU、内存等模块于一体的 SoC，历代产品通常都采用台积电当时最先进的制程。台积电 N2（2nm 级）是其 N3 之后的下一代工艺，在能效和 SRAM 密度上有所提升，而 M6 是苹果首款采用该工艺的芯片。Intel 的 Panther Lake（如拥有 16 核和 Arc B390 核显的 Core Ultra X9 388H）是 Intel 的竞争性新一代移动平台，因此两者的直接对比备受关注。
+**背景**: MiMo 是小米自研的大模型系列，“全模态”（omni-modal）意味着模型能够原生处理文本、图像、音频等多种输入类型，而不依赖各自独立的专用模块。强化学习（RL）是一种通过奖励期望输出来训练模型的技术，已成为提升现代大语言模型推理能力的关键方法。“Benchmaxxing”是社区俚语，指为在公开基准测试中取得高分而进行激进优化，因此一个实时追踪这些分数的仪表盘既引人关注，也容易招致质疑。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.macrumors.com/2026/08/25/apple-reveals-m6/">Apple Reveals M6 as First-Ever 2nm Chip - MacRumors</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Apple_M6">Apple M6 - Wikipedia</a></li>
-<li><a href="https://overclock3d.net/reviews/cpu_mainboard/intel-core-ultra-x9-388h-panther-lake-cpu-review/">Intel Core Ultra X9 388H "Panther Lake" CPU Review - OC3D</a></li>
+<li><a href="https://mimo.xiaomi.com/mimo-v2-6">MiMo-V2.6 | Xiaomi</a></li>
+<li><a href="https://siliconangle.com/2026/09/22/xiaomi-introduces-mimo-v2-6-series-open-source-ai-model-family/">Xiaomi introduces Mimo-V2.6 series open-source AI model family - SiliconANGLE</a></li>
+<li><a href="https://mimo.mi.com/models/en-US/mimo-v2.6-pro">Xiaomi MiMo-V2.6 Series: 3 New Models Officially Released</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Apple Silicon`, `#hardware benchmarks`, `#M6 Mac mini`, `#GPU performance`, `#semiconductor process`
+**标签**: `#AI`, `#Machine Learning`, `#Multimodal`, `#Reinforcement Learning`, `#Xiaomi`
+
+---
+
+<a id="item-11"></a>
+## [阿里发布真武 V900，宣称最强国产 AI 芯片，算力提升至 3 倍](https://finance.sina.com.cn/stock/bxjj/2026-09-22/doc-inissitf7048094.shtml) ⭐️ 8.0/10
+
+在 2026 云栖大会上，阿里平头哥于 9 月 22 日发布真武 V900 AI 芯片，宣称算力达到上一代真武 M890 的 3 倍，单一集群最多可扩展至 50 万卡。阿里 CEO 吴泳铭同时表示，Qwen 计划训练 5 至 10 万亿参数的新模型，并目标到 2032 年阿里云全球数据中心规模超过 20GW。 这是来自头部云厂商的一次重大硬件发力，直接挑战英伟达在 AI 加速器领域的主导地位，并加剧了国产芯片厂商之间的竞争。3 倍算力提升、50 万卡集群扩展能力以及 20GW 数据中心路线图，表明阿里正押注芯片、云与模型垂直整合的 AI 基础设施。 搭载真武 V900、ICN Switch、磐脉及镇岳芯片的全新磐久超节点服务器计划于 2027 年第一季度上市；而现有的阿里云灵骏真武 M890 超节点实例 GP9A 已对外提供服务，成为国内首个成功运行超 2 万亿参数大模型的超节点形态算力。阿里还承诺三年投入超过 530 亿美元以支撑这一建设。
+
+telegram · zaihuapd · 9月22日 03:30
+
+**背景**: 平头哥是阿里巴巴旗下的自研芯片设计部门，其真武系列是面向 AI 训练与推理的芯片，旨在降低对英伟达 GPU 的依赖。超节点是一种机柜级紧耦合系统，通过 ICN Switch 等高速互联芯片把大量 AI 芯片连接起来，使其像一台计算机一样工作，这对大模型训练和高并发 Agent 推理至关重要。Qwen（通义千问）是阿里的开源大语言模型系列，参数量是衡量模型规模与容量的粗略指标。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.eet-china.com/news/202609227841.html">阿里亮出最强底牌：真武V900发布，狂砸3800亿建AI集群 阿里亮出最强底...</a></li>
+<li><a href="https://www.ithome.com/1/005/602.htm">最强国产 AI 芯片阿里平头哥真武 V900 发布，全新磐久超节点服务器明...</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/2085708631140579231">阿里研究员透露Qwen4.5后模型将扩展至5-10T参数 - 知乎</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI chips`, `#Alibaba`, `#AI infrastructure`, `#datacenter`, `#hardware`
+
+---
+
+<a id="item-12"></a>
+## [DeepSeek 发布 DSec 沙箱平台：每日服务 300 万个实例](https://arxiv.org/abs/2609.22978) ⭐️ 8.0/10
+
+DeepSeek-AI 与清华大学联合发布技术报告《DeepSeek Elastic Compute（DSec）》，公开了一个每天服务约 300 万个沙箱实例的生产级沙箱平台，用于支撑大规模智能体训练与评测。该平台通过统一 SDK 提供 FnCall、容器、Firecracker microVM 和完整 VM 四种后端，并将有状态的 rollout 执行与可抢占的 GPU 训练解耦。 这是业界首批公开披露的生产级智能体沙箱基础设施细节之一，说明面向智能体的强化学习在每天数百万实例的规模下已具备可行性。其架构设计与性能数据对构建智能体训练流水线的 AI 基础设施和分布式系统工程师具有重要参考价值。 单个生产单元约 160 个节点，峰值并发超过 38 万，创建速度超过每秒 5000 个沙箱，单节点可高密度承载 3200 个容器或 800 个 microVM。平台基于 3FS 分布式文件系统按需加载 EROFS 镜像，而非传统 Docker 全量拉取，从而实现任务完成时间快 1.7 倍、磁盘写入减少 57%，并通过内存共享与回收机制使峰值内存占用下降约 40%。
+
+telegram · zaihuapd · 9月22日 04:45
+
+**背景**: 智能体训练需要在被称为沙箱的隔离环境中运行不可信代码，例如代码执行、软件工程任务和安全渗透测试，而这些沙箱必须能够以极大规模快速创建和销毁。Firecracker microVM 是基于 KVM 的轻量级虚拟机，兼具硬件级隔离、亚秒级启动和低内存开销；EROFS 则是一种只读 Linux 文件系统，专为压缩镜像的高性能分发而优化。3FS 是 DeepSeek 自研的面向 AI 训练与推理的高性能分布式文件系统，为 DSec 的镜像按需加载提供了底层支撑。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://github.com/deepseek-ai/3FS">GitHub - deepseek-ai/3FS: A high-performance distributed file ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/EROFS">EROFS</a></li>
+<li><a href="https://github.com/firecracker-microvm/firecracker">GitHub - firecracker-microvm/firecracker: Secure and fast ... GitHub - firecracker-microvm/firecracker: Secure and fast ... Run Your First Firecracker microVM - labs.iximiuz.com I tried Firecracker microVMs for self-hosted services, and it ... firecracker-microvm/firecracker | DeepWiki What Is a Firecracker VM? · Learn</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI infrastructure`, `#sandbox`, `#agent training`, `#distributed systems`, `#DeepSeek`
+
+---
+
+<a id="item-13"></a>
+## [中国调查 DeepSeek 与月之暗面数据泄露事件](https://www.theinformation.com/articles/china-probes-deepseek-moonshot-potential-data-leaks-anthropic) ⭐️ 8.0/10
+
+中国互联网监管机构正在调查 DeepSeek 和月之暗面（Moonshot AI），起因是 Anthropic 于 9 月 10 日发布一份 154 页报告，指控 7 家中国公司大规模违规使用 Claude 模型。报告举例称，DeepSeek 曾把一名警方监控系统开发工程师的请求转发给 Claude。 此次调查处于 AI 安全、数据隐私和中美科技摩擦的交汇点，可能改变中国 AI 公司获取境外模型和处理敏感数据的方式。它还可能为跨境 AI 合规以及第三方模型使用的监管审查树立先例。 Anthropic 的报告点名了 7 家中国公司，并特别指控 DeepSeek 将一名开发警方监控系统的工程师的请求转发给 Claude。调查由中国互联网监管机构进行，但目前尚未公布正式指控或结论。
+
+telegram · zaihuapd · 9月22日 14:37
+
+**背景**: DeepSeek 是一家总部位于杭州的 AI 公司，由对冲基金幻方量化（High-Flyer）拥有和资助，开发开放权重的大语言模型，并于 2025 年 1 月发布了 DeepSeek-R1 聊天机器人。月之暗面（Moonshot AI）是一家中国 AI 初创公司，其名称灵感来自 Pink Floyd 的专辑《The Dark Side of the Moon》，开发了 Kimi 系列模型。Anthropic 的 Claude 是一款商业 AI 模型，其数据使用政策对客户数据的处理方式有所限制，尤其是对商业用户和 API 用户。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(Company)">DeepSeek (Company)</a></li>
+<li><a href="https://www.moonshot.ai/">Welcome to Moonshot AI . Our mission is to seek the optimal...</a></li>
+<li><a href="https://platform.claude.com/docs/en/manage-claude/api-and-data-retention">API and data retention - Claude Platform Docs</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI regulation`, `#data privacy`, `#DeepSeek`, `#Anthropic`, `#China tech`
 
 ---
